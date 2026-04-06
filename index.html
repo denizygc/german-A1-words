@@ -418,6 +418,16 @@
         .form-group select { cursor: pointer; }
         .form-group select option { background: var(--bg); color: var(--text-main); }
 
+        .noun-row {
+            display: none;
+            gap: 10px;
+        }
+        .noun-row .artikel-select {
+            flex: 0 0 100px;
+        }
+        .noun-row .noun-input {
+            flex: 1;
+        }
         .type-toggle {
             display: flex;
             border: 1px solid var(--border);
@@ -534,6 +544,11 @@
             font-family: 'Space Mono', monospace;
             font-size: 0.95rem;
             margin-bottom: 16px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .pool-search:focus {
+            border-color: var(--accent-cyan);
         }
         .pool-list {
             max-height: 320px;
@@ -748,32 +763,50 @@
     <div class="modal-overlay" id="add-modal">
         <div class="modal">
             <h2>Add Words</h2>
-            <p class="modal-sub">Add your own vocabulary or artikel questions to the quiz.</p>
+            <p class="modal-sub">Add your own vocabulary to the quiz.</p>
 
             <div class="word-form">
-                <div class="form-group full">
-                    <label>Type</label>
-                    <div class="type-toggle">
-                        <button class="type-toggle-btn active" onclick="setAddType('vocab', this)">Vocab</button>
-                        <button class="type-toggle-btn" onclick="setAddType('artikel', this)">Artikel</button>
+                <!-- Noun row: article selector + noun word input -->
+                <div class="form-group full" id="noun-row" style="display:none;">
+                    <label>German Noun</label>
+                    <div class="noun-row" style="display:flex;">
+                        <div class="form-group artikel-select">
+                            <select id="add-artikel">
+                                <option value="der">der</option>
+                                <option value="die">die</option>
+                                <option value="das">das</option>
+                            </select>
+                        </div>
+                        <div class="form-group noun-input">
+                            <input type="text" id="add-noun" placeholder="e.g. Hund">
+                        </div>
                     </div>
                 </div>
 
-                <div class="form-row">
+                <!-- Standard row: used for non-noun categories -->
+                <div class="form-row" id="standard-row">
                     <div class="form-group">
                         <label>German Word</label>
-                        <input type="text" id="add-german" placeholder="e.g. der Hund">
+                        <input type="text" id="add-german" placeholder="e.g. laufen">
                     </div>
                     <div class="form-group">
                         <label>English Meaning</label>
-                        <input type="text" id="add-english" placeholder="e.g. dog">
+                        <input type="text" id="add-english" placeholder="e.g. to run">
+                    </div>
+                </div>
+
+                <!-- English meaning for noun row -->
+                <div class="form-row" id="noun-english-row" style="display:none;">
+                    <div class="form-group full">
+                        <label>English Meaning</label>
+                        <input type="text" id="add-english-noun" placeholder="e.g. dog">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label>Category</label>
-                        <select id="add-category">
+                        <select id="add-category" onchange="onCategoryChange(this.value)">
                             <option value="Noun">Noun</option>
                             <option value="Verb">Verb</option>
                             <option value="Adjective">Adjective</option>
@@ -785,14 +818,6 @@
                             <option value="Common Adverbs">Common Adverbs</option>
                             <option value="Interjection">Interjection</option>
                             <option value="Custom">Custom</option>
-                        </select>
-                    </div>
-                    <div class="form-group" id="artikel-select-group" style="display:none;">
-                        <label>Artikel (Correct)</label>
-                        <select id="add-artikel">
-                            <option value="der">der</option>
-                            <option value="die">die</option>
-                            <option value="das">das</option>
                         </select>
                     </div>
                 </div>
@@ -838,7 +863,7 @@
         let wrongCount = 0;
         let locked = false;
         let isSlow = false;
-        let addType = 'vocab';
+
         const synth = window.speechSynthesis;
 
         // ===== INIT =====
@@ -1066,6 +1091,9 @@
         // ===== ADD WORDS MODAL =====
         function openAddWords() {
             document.getElementById('add-modal').classList.add('open');
+            const cat = document.getElementById('add-category');
+            cat.value = 'Noun';
+            onCategoryChange('Noun');
         }
 
         function openPoolList() {
@@ -1082,8 +1110,9 @@
             const query = filter.trim().toLowerCase();
             const words = getAllWords();
             const results = words.filter(w => {
+                if (!query) return true;  // Show all if no filter
                 const german = (w.full || w.q || '').toLowerCase();
-                const english = ((w.ans || w.eng) || '').toLowerCase();
+                const english = ((w.eng || w.ans) || '').toLowerCase();
                 return german.includes(query) || english.includes(query);
             });
 
@@ -1094,17 +1123,17 @@
             }
 
             list.innerHTML = results.map(w => {
-                const title = w.type === 'artikel' ? w.full : w.q;
+                const title = w.type === 'artikel' ? (w.full || `${w.ans} ${w.q}`) : (w.q || '');
                 const subtitle = w.type === 'artikel'
-                    ? `${w.eng} · ${w.ans}`
-                    : `${w.ans}`;
+                    ? `${w.eng || ''} · ${w.ans || ''}`
+                    : `${w.ans || ''}`;
                 return `
                     <div class="pool-item">
                         <div class="pool-item-left">
                             <span class="pool-item-word">${title}</span>
                             <span class="pool-item-sub">${subtitle}</span>
                         </div>
-                        <span class="pool-item-tag">${w.type}</span>
+                        <span class="pool-item-tag">${w.type || 'unknown'}</span>
                     </div>
                 `;
             }).join('');
@@ -1115,57 +1144,105 @@
             updatePoolCount();
         }
 
-        function setAddType(type, btn) {
-            addType = type;
-            document.querySelectorAll('.type-toggle-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            document.getElementById('artikel-select-group').style.display = type === 'artikel' ? 'flex' : 'none';
+        // Build artikel lookup map from base questions
+        function buildArtikelLookup() {
+            const lookup = {};
+            baseQuestions.forEach(q => {
+                if (q.type === 'artikel' && q.q) {
+                    const key = q.q.toLowerCase();
+                    lookup[key] = q.ans;
+                }
+            });
+            return lookup;
+        }
+        const artikelLookup = buildArtikelLookup();
+
+        // Parse German input: extract article if present, or look it up
+        function parseGermanWord(input) {
+            const trimmed = input.trim();
+            const artikelMatch = trimmed.match(/^(der|die|das)\s+(.+)$/i);
+            
+            if (artikelMatch) {
+                return { artikel: artikelMatch[1].toLowerCase(), word: artikelMatch[2] };
+            }
+            
+            const lookupKey = trimmed.toLowerCase();
+            if (artikelLookup[lookupKey]) {
+                return { artikel: artikelLookup[lookupKey], word: trimmed };
+            }
+            
+            return { artikel: null, word: trimmed };
+        }
+
+        function onCategoryChange(value) {
+            const isNoun = value === 'Noun';
+            document.getElementById('noun-row').style.display = isNoun ? 'block' : 'none';
+            document.getElementById('noun-english-row').style.display = isNoun ? '' : 'none';
+            document.getElementById('standard-row').style.display = isNoun ? 'none' : '';
         }
 
         function addWord() {
-            const german = document.getElementById('add-german').value.trim();
-            const english = document.getElementById('add-english').value.trim();
             const category = document.getElementById('add-category').value;
+            const isNoun = category === 'Noun';
+
+            let german, english, artikel;
+
+            if (isNoun) {
+                artikel = document.getElementById('add-artikel').value;
+                german = document.getElementById('add-noun').value.trim();
+                english = document.getElementById('add-english-noun').value.trim();
+            } else {
+                german = document.getElementById('add-german').value.trim();
+                english = document.getElementById('add-english').value.trim();
+            }
 
             if (!german || !english) {
                 showToast('Please fill in both German and English fields');
                 return;
             }
 
-            let newWord;
-            if (addType === 'vocab') {
-                newWord = {
+            if (isNoun) {
+                // Add vocab entry (with article in display word)
+                userWords.push({
                     type: 'vocab',
-                    q: german,
+                    q: `${artikel} ${german}`,
                     ans: english,
-                    options: [], // will be generated at quiz start
+                    options: [],
                     grp: category
-                };
-            } else {
-                const artikel = document.getElementById('add-artikel').value;
-                // Strip artikel from german word if user included it
-                let cleanWord = german.replace(/^(der|die|das)\s+/i, '');
-                newWord = {
+                });
+                // Add artikel entry
+                userWords.push({
                     type: 'artikel',
-                    q: cleanWord,
+                    q: german,
                     ans: artikel,
                     eng: english,
                     options: ['der', 'die', 'das'],
                     grp: category,
-                    full: `${artikel} ${cleanWord}`
-                };
+                    full: `${artikel} ${german}`
+                });
+            } else {
+                const parsed = parseGermanWord(german);
+                userWords.push({
+                    type: 'vocab',
+                    q: parsed.artikel ? `${parsed.artikel} ${parsed.word}` : parsed.word,
+                    ans: english,
+                    options: [],
+                    grp: category
+                });
             }
-
-            userWords.push(newWord);
             localStorage.setItem('germanQuizUserWords', JSON.stringify(userWords));
 
-            // Clear form
-            document.getElementById('add-german').value = '';
-            document.getElementById('add-english').value = '';
+            if (isNoun) {
+                document.getElementById('add-noun').value = '';
+                document.getElementById('add-english-noun').value = '';
+            } else {
+                document.getElementById('add-german').value = '';
+                document.getElementById('add-english').value = '';
+            }
 
             renderAddedList();
             updatePoolCount();
-            showToast(`Added: ${german}`);
+            showToast(isNoun ? `Added: ${artikel} ${german} (vocab + artikel)` : `Added: ${german}`);
         }
 
         function removeWord(index) {
