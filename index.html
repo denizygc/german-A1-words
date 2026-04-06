@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>German Vocab Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="A1 Quiz">
+    <meta name="theme-color" content="#0b0d17">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <style>
+        :root {
+            --bg: #0b0d17;
+            --card-bg: #131627;
+            --accent-cyan: #00e5c0;
+            --accent-purple: #7c6af7;
+            --wrong-red: #ff4f6d;
+            --text-main: #ffffff;
+            --text-dim: #8a8d9e;
+            --btn-bg: #1c2038;
+            --btn-hover: #262b48;
+            --border: #2a2e45;
+            --overlay: rgba(11, 13, 23, 0.92);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: var(--bg);
+            color: var(--text-main);
+            font-family: 'Space Mono', monospace;
+            min-height: 100vh;
+            min-height: 100dvh;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            text-align: center;
+            padding: 30px 20px 0;
+            width: 100%;
+            max-width: 760px;
+        }
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            margin: 0 0 8px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            color: var(--text-dim);
+            font-size: 0.82rem;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+        .stats {
+            font-weight: bold;
+            font-size: 0.9rem;
+            word-spacing: 15px;
+            margin-bottom: 20px;
+        }
+        .stats .corr { color: var(--accent-cyan); }
+        .stats .wrng { color: var(--wrong-red); }
+
+        hr {
+            width: 100%;
+            max-width: 700px;
+            border: none;
+            border-top: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+
+        /* ===== BOTTOM BAR ===== */
+        .bottom-bar {
+            display: flex;
+            gap: 0;
+            width: 100%;
+            max-width: 700px;
+            margin-bottom: 24px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        .bottom-btn {
+            flex: 1;
+            background: var(--btn-bg);
+            border: none;
+            color: var(--text-dim);
+            padding: 14px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .bottom-btn:first-child { border-right: 1px solid var(--border); }
+        .bottom-btn:hover { background: var(--btn-hover); color: var(--text-main); }
+        .bottom-btn:active { transform: scale(0.97); }
+
+        /* ===== QUIZ CARD ===== */
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 700px;
+            padding: 30px;
+            box-sizing: border-box;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin: 0 20px;
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            color: var(--text-dim);
+            font-size: 0.82rem;
+            letter-spacing: 1px;
+        }
+        .badge {
+            background: transparent;
+            border: 1px solid var(--accent-purple);
+            color: var(--accent-purple);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+        }
+
+        .audio-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            min-height: 140px;
+            justify-content: center;
+        }
+        .speaker-btn {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #1a1e36;
+            border: 2px solid var(--accent-cyan);
+            color: var(--text-main);
+            font-size: 1.8rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0, 229, 192, 0.2);
+            transition: transform 0.1s;
+        }
+        .speaker-btn:active { transform: scale(0.93); }
+
+        .speed-toggle {
+            display: flex;
+            margin-top: 20px;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            overflow: hidden;
+        }
+        .speed-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-dim);
+            padding: 7px 18px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.78rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .speed-btn.active {
+            background: #1a1e36;
+            color: var(--accent-cyan);
+            border: 1px solid var(--accent-cyan);
+            border-radius: 30px;
+        }
+
+        .text-question {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+            font-weight: 700;
+            text-align: center;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+        .text-sub {
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        .opt-btn {
+            background: var(--btn-bg);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 16px;
+            border-radius: 12px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .opt-btn:hover { background: var(--btn-hover); border-color: #3f4563; }
+        .opt-btn.correct { background: var(--accent-cyan) !important; color: #000 !important; border-color: var(--accent-cyan) !important; }
+        .opt-btn.wrong { background: var(--wrong-red) !important; color: #fff !important; border-color: var(--wrong-red) !important; }
+
+        .card-footer {
+            display: flex;
+            gap: 12px;
+        }
+        .action-btn {
+            flex: 1;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-dim);
+            padding: 14px;
+            border-radius: 12px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .action-btn:hover { border-color: var(--text-dim); color: var(--text-main); }
+
+        #result-area { text-align: center; display: none; }
+
+        /* ===== SETUP SCREEN ===== */
+        .setup-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 700px;
+            padding: 20px;
+        }
+        .setup-section {
+            width: 100%;
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid var(--border);
+        }
+        .setup-section h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--accent-cyan);
+        }
+        .num-options {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .num-btn {
+            background: var(--btn-bg);
+            border: 2px solid var(--border);
+            color: var(--text-main);
+            padding: 14px 8px;
+            border-radius: 12px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            text-align: center;
+        }
+        .num-btn:hover { border-color: var(--accent-purple); }
+        .num-btn.selected { border-color: var(--accent-cyan); background: rgba(0,229,192,0.1); color: var(--accent-cyan); }
+        .num-btn .num-label {
+            display: block;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            margin-top: 4px;
+            font-weight: 400;
+        }
+
+        .custom-num-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+            align-items: center;
+        }
+        .custom-num-row input {
+            flex: 1;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 14px;
+            color: var(--text-main);
+            font-family: 'Space Mono', monospace;
+            font-size: 0.95rem;
+            outline: none;
+        }
+        .custom-num-row input:focus { border-color: var(--accent-cyan); }
+        .custom-num-row input::placeholder { color: #555; }
+
+        .start-btn {
+            width: 100%;
+            max-width: 700px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            border: none;
+            color: #000;
+            padding: 18px;
+            border-radius: 14px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.2s;
+            box-shadow: 0 4px 20px rgba(0, 229, 192, 0.2);
+        }
+        .start-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0, 229, 192, 0.3); }
+        .start-btn:active { transform: scale(0.98); }
+
+        /* ===== MODAL (Add Words) ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--overlay);
+            z-index: 1000;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 16px;
+            overflow-y: auto;
+        }
+        .modal-overlay.open { display: flex; }
+
+        .modal {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 560px;
+            padding: 28px;
+            animation: slideUp 0.3s ease;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .modal h2 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin-bottom: 6px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .modal-sub {
+            color: var(--text-dim);
+            font-size: 0.78rem;
+            margin-bottom: 20px;
+        }
+
+        .word-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .form-group { display: flex; flex-direction: column; gap: 4px; }
+        .form-group.full { grid-column: 1 / -1; }
+        .form-group label {
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .form-group input, .form-group select {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 12px;
+            color: var(--text-main);
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            outline: none;
+        }
+        .form-group input:focus, .form-group select:focus { border-color: var(--accent-cyan); }
+        .form-group select { cursor: pointer; }
+        .form-group select option { background: var(--bg); color: var(--text-main); }
+
+        .type-toggle {
+            display: flex;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .type-toggle-btn {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: var(--text-dim);
+            padding: 10px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.82rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .type-toggle-btn.active {
+            background: var(--accent-purple);
+            color: #fff;
+        }
+
+        .add-word-btn {
+            width: 100%;
+            background: var(--accent-purple);
+            border: none;
+            color: #fff;
+            padding: 13px;
+            border-radius: 10px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .add-word-btn:hover { opacity: 0.9; }
+        .add-word-btn:active { transform: scale(0.98); }
+
+        .added-list {
+            margin-top: 16px;
+            border-top: 1px solid var(--border);
+            padding-top: 14px;
+        }
+        .added-list h4 {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .added-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 10px;
+            background: var(--btn-bg);
+            border-radius: 8px;
+            margin-bottom: 6px;
+            font-size: 0.82rem;
+        }
+        .added-item .word-info {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .added-item .de { color: var(--accent-cyan); font-weight: 700; }
+        .added-item .en { color: var(--text-dim); }
+        .added-item .tag {
+            font-size: 0.65rem;
+            color: var(--accent-purple);
+            border: 1px solid var(--accent-purple);
+            padding: 2px 6px;
+            border-radius: 10px;
+        }
+        .remove-btn {
+            background: none;
+            border: none;
+            color: var(--wrong-red);
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 4px;
+            line-height: 1;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .modal-close-btn {
+            flex: 1;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-dim);
+            padding: 13px;
+            border-radius: 10px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .modal-close-btn:hover { border-color: var(--text-dim); color: var(--text-main); }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--accent-cyan);
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            z-index: 2000;
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            pointer-events: none;
+        }
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        .word-count-badge {
+            display: inline-block;
+            background: var(--accent-purple);
+            color: #fff;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-left: 6px;
+            font-family: 'Space Mono', monospace;
+        }
+
+        /* Scroll for added list */
+        .added-scroll {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .added-scroll::-webkit-scrollbar { width: 4px; }
+        .added-scroll::-webkit-scrollbar-track { background: transparent; }
+        .added-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+        @media (max-width: 480px) {
+            .num-options { grid-template-columns: repeat(2, 1fr); }
+            .form-row { grid-template-columns: 1fr; }
+            .card { padding: 20px; margin: 0 12px; }
+            .bottom-bar { margin-left: 12px; margin-right: 12px; }
+            .header { padding: 20px 12px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>German Vocab Quiz</h1>
+        <div class="subtitle" id="subtitle-info">634 words · 479 vocab + 155 artikel · Listen & Choose</div>
+        <div class="stats" id="stats-bar" style="display:none;">
+            <span class="corr">● <span id="count-correct">0</span> correct</span>
+            <span class="wrng">● <span id="count-wrong">0</span> wrong</span>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ===== SETUP SCREEN ===== -->
+    <div id="setup-screen" class="setup-screen">
+        <div class="setup-section">
+            <h3>Choose Word Number</h3>
+            <div class="num-options" id="num-options">
+                <button class="num-btn" data-count="10" onclick="selectCount(10, this)">10<span class="num-label">Quick</span></button>
+                <button class="num-btn" data-count="25" onclick="selectCount(25, this)">25<span class="num-label">Short</span></button>
+                <button class="num-btn" data-count="50" onclick="selectCount(50, this)">50<span class="num-label">Medium</span></button>
+                <button class="num-btn selected" data-count="0" onclick="selectCount(0, this)">ALL<span class="num-label">Full set</span></button>
+            </div>
+            <div class="custom-num-row">
+                <input type="number" id="custom-count" min="1" placeholder="Or type a custom number..." oninput="customCountInput(this)">
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <button class="bottom-btn" onclick="openAddWords()">Add Words</button>
+            <button class="bottom-btn" id="word-pool-info" style="cursor:default; pointer-events:none;">Word Pool: <span id="pool-count">125</span></button>
+        </div>
+
+        <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- ===== QUIZ AREA ===== -->
+    <div class="card" id="quiz-area" style="display:none;">
+        <div class="card-header">
+            <span id="q-label">QUESTION 1 / 125 · VOCAB</span>
+            <span id="q-badge" class="badge">VERB</span>
+        </div>
+        <div id="dynamic-content"></div>
+        <div class="options-grid" id="options"></div>
+        <div class="card-footer" id="footer-actions">
+            <button class="action-btn" onclick="showAns()">Show Answer</button>
+            <button class="action-btn" onclick="skip()">Skip →</button>
+        </div>
+    </div>
+
+    <!-- ===== RESULT AREA ===== -->
+    <div class="card" id="result-area" style="display:none;">
+        <h2 style="color: var(--accent-cyan); font-family: 'Syne', sans-serif; margin-bottom: 20px;">Quiz Complete!</h2>
+        <p class="subtitle" id="final-score" style="font-size: 1.2rem; margin: 20px 0;"></p>
+        <div style="display:flex; gap:12px;">
+            <button class="opt-btn" onclick="backToSetup()" style="flex:1; border-color: var(--accent-purple);">New Quiz</button>
+            <button class="opt-btn" onclick="restartSame()" style="flex:1; border-color: var(--accent-cyan);">Retry</button>
+        </div>
+    </div>
+
+    <!-- ===== ADD WORDS MODAL ===== -->
+    <div class="modal-overlay" id="add-modal">
+        <div class="modal">
+            <h2>Add Words</h2>
+            <p class="modal-sub">Add your own vocabulary or artikel questions to the quiz.</p>
+
+            <div class="word-form">
+                <div class="form-group full">
+                    <label>Type</label>
+                    <div class="type-toggle">
+                        <button class="type-toggle-btn active" onclick="setAddType('vocab', this)">Vocab</button>
+                        <button class="type-toggle-btn" onclick="setAddType('artikel', this)">Artikel</button>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>German Word</label>
+                        <input type="text" id="add-german" placeholder="e.g. der Hund">
+                    </div>
+                    <div class="form-group">
+                        <label>English Meaning</label>
+                        <input type="text" id="add-english" placeholder="e.g. dog">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select id="add-category">
+                            <option value="Noun">Noun</option>
+                            <option value="Verb">Verb</option>
+                            <option value="Adjective">Adjective</option>
+                            <option value="Adverb">Adverb</option>
+                            <option value="Preposition">Preposition</option>
+                            <option value="Numbers">Numbers</option>
+                            <option value="Months">Months</option>
+                            <option value="Clothing & Colors">Clothing & Colors</option>
+                            <option value="Common Adverbs">Common Adverbs</option>
+                            <option value="Interjection">Interjection</option>
+                            <option value="Custom">Custom</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="artikel-select-group" style="display:none;">
+                        <label>Artikel (Correct)</label>
+                        <select id="add-artikel">
+                            <option value="der">der</option>
+                            <option value="die">die</option>
+                            <option value="das">das</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="add-word-btn" onclick="addWord()">+ Add Word</button>
+            </div>
+
+            <div class="added-list" id="added-list" style="display:none;">
+                <h4>Added Words <span class="word-count-badge" id="added-count">0</span></h4>
+                <div class="added-scroll" id="added-scroll"></div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="modal-close-btn" onclick="closeAddWords()">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // ===== BASE WORD DATA =====
+        const baseQuestions = [{"type": "vocab", "q": "blau", "ans": "blue", "options": ["shoe", "bread roll", "blue", "August"], "grp": "Clothing & Colors"}, {"type": "vocab", "q": "neun", "ans": "nine", "options": ["family name/surname", "fruit", "nine", "young person/teenager"], "grp": "Numbers"}, {"type": "vocab", "q": "mögen", "ans": "to like", "options": ["selfemployed", "can/to be able to", "nineteen", "to like"], "grp": "Verb"}, {"type": "vocab", "q": "jung", "ans": "young", "options": ["rice", "your (plural informal)", "young", "to know (a person/thing)"], "grp": "Noun"}, {"type": "vocab", "q": "ab", "ans": "from/starting", "options": ["male", "from/starting", "here", "above/upstairs"], "grp": "Preposition"}, {"type": "vocab", "q": "der Sohn", "ans": "son", "options": ["one/a", "son", "so/well", "to get off"], "grp": "Noun"}, {"type": "vocab", "q": "sieben", "ans": "seven", "options": ["all/everything", "sixty", "friend/boyfriend", "seven"], "grp": "Numbers"}, {"type": "vocab", "q": "die Gruppe", "ans": "group", "options": ["sender", "to recommend", "group", "family name/surname"], "grp": "Noun"}, {"type": "vocab", "q": "einmal", "ans": "once", "options": ["to have breakfast", "meat", "once", "foreign"], "grp": "Adverb"}, {"type": "vocab", "q": "schön", "ans": "beautiful/nice", "options": ["one", "half board", "beautiful/nice", "result"], "grp": "Adjective"}, {"type": "vocab", "q": "der Anschluss", "ans": "connection", "options": ["connection", "person/human", "announcement", "excuse/apology"], "grp": "Noun"}, {"type": "vocab", "q": "möglich", "ans": "possible", "options": ["to want", "fax", "song", "possible"], "grp": "Adjective"}, {"type": "vocab", "q": "mitkommen", "ans": "to come along", "options": ["all/everything", "to come along", "drink/beverage", "forbidden"], "grp": "Verb"}, {"type": "vocab", "q": "bleiben", "ans": "to stay/remain", "options": ["to stay/remain", "to know (a fact)", "to earn", "half board"], "grp": "Verb"}, {"type": "vocab", "q": "elf", "ans": "eleven", "options": ["you (dative)", "at the back", "eleven", "young person/teenager"], "grp": "Numbers"}, {"type": "vocab", "q": "buchstabieren", "ans": "to spell", "options": ["to excuse", "old", "thirst", "to spell"], "grp": "Verb"}, {"type": "vocab", "q": "nehmen", "ans": "to take", "options": ["to take", "to stand/be (written)", "where to", "twenty"], "grp": "Verb"}, {"type": "vocab", "q": "verstehen", "ans": "to understand", "options": ["to repair", "to understand", "to print", "to say/tell"], "grp": "Verb"}, {"type": "vocab", "q": "draußen", "ans": "outside", "options": ["once", "to be missing/absent", "outside", "old"], "grp": "Common Adverbs"}, {"type": "vocab", "q": "die Mutter", "ans": "mother", "options": ["blue", "to fly", "your (plural informal)", "mother"], "grp": "Noun"}, {"type": "vocab", "q": "wandern", "ans": "to hike", "options": ["Friday", "to hike", "fourteen", "also/too"], "grp": "Verb"}, {"type": "vocab", "q": "mitnehmen", "ans": "to take along", "options": ["where from", "to shop", "to take along", "friend/boyfriend"], "grp": "Verb"}, {"type": "vocab", "q": "hundert", "ans": "hundred", "options": ["to phone", "track/platform", "to smoke", "hundred"], "grp": "Numbers"}, {"type": "vocab", "q": "frei", "ans": "free/available", "options": ["to come", "free/available", "also/too", "to give"], "grp": "Adjective"}, {"type": "vocab", "q": "liegen", "ans": "to lie/be located", "options": ["to lie/be located", "entrance", "blue", "just (now)"], "grp": "Verb"}, {"type": "vocab", "q": "sich kümmern", "ans": "to take care of", "options": ["lady", "to take care of", "to marry", "wrong/false"], "grp": "Verb"}, {"type": "vocab", "q": "sich treffen", "ans": "to meet", "options": ["Wednesday", "to meet", "young person/teenager", "automatic(ally)"], "grp": "Verb"}, {"type": "vocab", "q": "leicht", "ans": "light/easy", "options": ["hello", "light/easy", "to use", "sixty"], "grp": "Adjective"}, {"type": "vocab", "q": "kurz", "ans": "short", "options": ["drink/beverage", "to give", "to bring", "short"], "grp": "Adjective"}, {"type": "vocab", "q": "der Juli", "ans": "July", "options": ["July", "to help", "open (adj.)", "to get off"], "grp": "Months"}, {"type": "vocab", "q": "das Telefon", "ans": "telephone", "options": ["telephone", "bright/light", "international", "to turn off"], "grp": "Noun"}, {"type": "vocab", "q": "sprechen", "ans": "to speak", "options": ["grey", "to speak", "happy", "six"], "grp": "Verb"}, {"type": "vocab", "q": "der Kindergarten", "ans": "kindergarten", "options": ["kindergarten", "Friday", "you (accusative)", "best"], "grp": "Noun"}, {"type": "vocab", "q": "baden", "ans": "to bathe", "options": ["to get dressed", "to bathe", "February", "important"], "grp": "Verb"}, {"type": "vocab", "q": "die Banane", "ans": "banana", "options": ["appetite", "banana", "green", "beautiful/nice"], "grp": "Noun"}, {"type": "vocab", "q": "der Drucker", "ans": "printer", "options": ["printer", "very soon / in a moment", "to congratulate", "wellknown/famous"], "grp": "Noun"}, {"type": "vocab", "q": "das Feuer", "ans": "fire/light", "options": ["to visit/sightsee", "to hear/listen", "fire/light", "mother"], "grp": "Noun"}, {"type": "vocab", "q": "einladen", "ans": "to invite", "options": ["to smoke", "phone call", "to invite", "every/each"], "grp": "Verb"}, {"type": "vocab", "q": "unser", "ans": "our", "options": ["meat", "to meet", "our", "good/well"], "grp": "Adjective"}, {"type": "vocab", "q": "der Durst", "ans": "thirst", "options": ["elevator", "soon", "to play", "thirst"], "grp": "Noun"}, {"type": "vocab", "q": "der August", "ans": "August", "options": ["to hike", "would like", "to walk/run", "August"], "grp": "Months"}, {"type": "vocab", "q": "machen", "ans": "to do/make", "options": ["degree", "elevator", "to do/make", "hello"], "grp": "Verb"}, {"type": "vocab", "q": "kennenlernen", "ans": "to get to know", "options": ["to take along", "to get to know", "sight/attraction", "white"], "grp": "Verb"}, {"type": "vocab", "q": "automatisch", "ans": "automatic(ally)", "options": ["automatic(ally)", "thousand", "can/to be able to", "to work"], "grp": "Adjective"}, {"type": "vocab", "q": "dein", "ans": "your (informal)", "options": ["to explain", "your (informal)", "favorite", "you (dative)"], "grp": "Adjective"}, {"type": "vocab", "q": "auf sein", "ans": "to be open", "options": ["to earn", "hundred", "to be open", "to live"], "grp": "Verb"}, {"type": "vocab", "q": "der Freund", "ans": "friend/boyfriend", "options": ["to grill/barbecue", "breakfast", "bread roll", "friend/boyfriend"], "grp": "Noun"}, {"type": "vocab", "q": "nur", "ans": "only", "options": ["wife / husband", "to drink", "only", "every/each"], "grp": "Common Adverbs"}, {"type": "vocab", "q": "die Geschwister", "ans": "siblings", "options": ["to search/look for", "to begin/start", "siblings", "where to"], "grp": "Noun"}, {"type": "vocab", "q": "abholen", "ans": "to pick up", "options": ["to open", "to pick up", "to sign", "to rain"], "grp": "Verb"}, {"type": "vocab", "q": "jed", "ans": "every/each", "options": ["excuse/apology", "every/each", "very soon / in a moment", "to mean"], "grp": "Adjective"}, {"type": "vocab", "q": "die Sehenswürdigkeit", "ans": "sight/attraction", "options": ["to drive/go", "June", "sight/attraction", "to have"], "grp": "Noun"}, {"type": "vocab", "q": "auch", "ans": "also/too", "options": ["for", "just (now)", "to live", "also/too"], "grp": "Common Adverbs"}, {"type": "vocab", "q": "die Reise", "ans": "trip/journey", "options": ["grandpa", "trip/journey", "to take off/depart", "February"], "grp": "Noun"}, {"type": "vocab", "q": "das Wochenende", "ans": "weekend", "options": ["telephone", "weekend", "to have breakfast", "to become"], "grp": "Noun"}, {"type": "vocab", "q": "wiederholen", "ans": "to repeat", "options": ["must/to have to", "to repeat", "grandma", "color"], "grp": "Verb"}, {"type": "vocab", "q": "enden", "ans": "to end", "options": ["to visit", "to end", "to be called", "green"], "grp": "Verb"}, {"type": "vocab", "q": "vermieten", "ans": "to rent out", "options": ["to rent out", "degree", "thirteen", "to cycle"], "grp": "Verb"}, {"type": "vocab", "q": "der Aufzug", "ans": "elevator", "options": ["thirst", "twenty", "elevator", "valid"], "grp": "Noun"}, {"type": "vocab", "q": "das Salz", "ans": "salt", "options": ["thirteen", "to please/like", "salt", "homeland"], "grp": "Noun"}, {"type": "vocab", "q": "lustig", "ans": "funny", "options": ["marital status", "weight", "funny", "coffee"], "grp": "Adjective"}, {"type": "vocab", "q": "erlauben", "ans": "to allow/permit", "options": ["hand", "to allow/permit", "housewife / househusband", "because/for"], "grp": "Verb"}, {"type": "vocab", "q": "finden", "ans": "to find", "options": ["five", "to find", "to meet", "to take off/depart"], "grp": "Verb"}, {"type": "vocab", "q": "wollen", "ans": "to want", "options": ["to want", "entry/admission", "man/husband", "often"], "grp": "Verb"}, {"type": "vocab", "q": "alt", "ans": "old", "options": ["end", "old", "Monday", "to walk/run"], "grp": "Adjective"}, {"type": "vocab", "q": "telefonieren", "ans": "to phone", "options": ["fire/light", "to phone", "welcome", "eighty"], "grp": "Verb"}, {"type": "vocab", "q": "stellen", "ans": "to put/place", "options": ["can/to be able to", "to work", "to put/place", "disco/club"], "grp": "Verb"}, {"type": "vocab", "q": "die Großeltern", "ans": "grandparents", "options": ["to say/tell", "then", "grandparents", "six"], "grp": "Noun"}, {"type": "vocab", "q": "meist", "ans": "most", "options": ["brother", "to please/like", "entry/admission", "most"], "grp": "Adjective"}, {"type": "vocab", "q": "die Heimat", "ans": "homeland", "options": ["November", "homeland", "to get off", "luck/happiness"], "grp": "Noun"}, {"type": "vocab", "q": "der Vater", "ans": "father", "options": ["December", "father", "please", "to dance"], "grp": "Noun"}, {"type": "vocab", "q": "sich vorstellen", "ans": "to introduce oneself", "options": ["to get on/board", "food/meal", "kindergarten", "to introduce oneself"], "grp": "Verb"}, {"type": "vocab", "q": "die Ecke", "ans": "corner", "options": ["to rent", "to pay", "corner", "to find"], "grp": "Noun"}, {"type": "vocab", "q": "arbeiten", "ans": "to work", "options": ["family name/surname", "glass", "excuse/apology", "to work"], "grp": "Verb"}, {"type": "vocab", "q": "best", "ans": "best", "options": ["there/to there", "to begin", "best", "thirteen"], "grp": "Adjective"}, {"type": "vocab", "q": "anfangen", "ans": "to begin/start", "options": ["June", "to begin/start", "hair", "to spell"], "grp": "Verb"}, {"type": "vocab", "q": "geboren", "ans": "to born", "options": ["to born", "where to", "to drink", "short"], "grp": "Verb"}, {"type": "vocab", "q": "gut", "ans": "good/well", "options": ["group", "to take off/depart", "good/well", "Sunday"], "grp": "Adjective"}, {"type": "vocab", "q": "das Alter", "ans": "age", "options": ["wellknown/famous", "salt", "age", "to congratulate"], "grp": "Noun"}, {"type": "vocab", "q": "der Mensch", "ans": "person/human", "options": ["foreign/strange", "to bathe", "person/human", "to belong to"], "grp": "Noun"}, {"type": "vocab", "q": "leise", "ans": "quiet(ly)", "options": ["grandfather", "quiet(ly)", "two", "wellknown/famous"], "grp": "Adjective"}, {"type": "vocab", "q": "schreiben", "ans": "to write", "options": ["October", "football/soccer", "to write", "must/to have to"], "grp": "Verb"}, {"type": "vocab", "q": "eilig", "ans": "urgent/in a hurry", "options": ["to love", "to click on", "urgent/in a hurry", "quiet(ly)"], "grp": "Adjective"}, {"type": "vocab", "q": "das Lied", "ans": "song", "options": ["to get up", "song", "to take off/depart", "salesperson"], "grp": "Noun"}, {"type": "vocab", "q": "einkaufen", "ans": "to shop", "options": ["to live/reside", "bread", "to shop", "correct/right"], "grp": "Verb"}, {"type": "vocab", "q": "benutzen", "ans": "to use", "options": ["foreign", "housewife / househusband", "to turn on", "to use"], "grp": "Verb"}, {"type": "vocab", "q": "aus", "ans": "from/out of", "options": ["to visit/sightsee", "September", "to understand", "from/out of"], "grp": "Preposition"}, {"type": "vocab", "q": "zahlen", "ans": "to pay", "options": ["next to it", "to pay", "friend/boyfriend", "coffee"], "grp": "Verb"}, {"type": "vocab", "q": "das Angebot", "ans": "offer/deal", "options": ["to get dressed", "adult", "offer/deal", "already"], "grp": "Noun"}, {"type": "vocab", "q": "durch", "ans": "through", "options": ["to rain", "July", "through", "to cook"], "grp": "Preposition"}, {"type": "vocab", "q": "der November", "ans": "November", "options": ["long", "March", "November", "married"], "grp": "Months"}, {"type": "vocab", "q": "bitten", "ans": "to ask/request", "options": ["to belong to", "breakfast", "to ask/request", "announcement"], "grp": "Verb"}, {"type": "vocab", "q": "weiter", "ans": "further/continue", "options": ["beautiful/nice", "green", "so/like this", "further/continue"], "grp": "Adverb"}, {"type": "vocab", "q": "kommen", "ans": "to come", "options": ["sixteen", "registration", "to come", "to move (house)"], "grp": "Verb"}, {"type": "vocab", "q": "der Gruß", "ans": "greeting", "options": ["greeting", "parents", "December", "bread roll"], "grp": "Noun"}, {"type": "vocab", "q": "helfen", "ans": "to help", "options": ["fax", "to drink", "loud", "to help"], "grp": "Verb"}, {"type": "vocab", "q": "glücklich", "ans": "happy", "options": ["fast/quick", "to visit/sightsee", "happy", "fifty"], "grp": "Adjective"}, {"type": "vocab", "q": "das Obst", "ans": "fruit", "options": ["to dance", "one/a", "fruit", "then"], "grp": "Noun"}, {"type": "vocab", "q": "der Sonntag", "ans": "Sunday", "options": ["quiet/calm", "to know (a fact)", "Sunday", "June"], "grp": "Noun"}, {"type": "vocab", "q": "tschüss", "ans": "bye", "options": ["woman/wife/Mrs.", "to begin", "fast/quick", "bye"], "grp": "Interjection"}, {"type": "artikel", "q": "Führung", "ans": "die", "eng": "guided tour", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Führung"}, {"type": "artikel", "q": "Gruppe", "ans": "die", "eng": "group", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Gruppe"}, {"type": "artikel", "q": "Formular", "ans": "das", "eng": "form (document)", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Formular"}, {"type": "artikel", "q": "Feuer", "ans": "das", "eng": "fire/light", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Feuer"}, {"type": "artikel", "q": "Film", "ans": "der", "eng": "film/movie", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Film"}, {"type": "artikel", "q": "Alter", "ans": "das", "eng": "age", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Alter"}, {"type": "artikel", "q": "Halbpension", "ans": "die", "eng": "half board", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Halbpension"}, {"type": "artikel", "q": "Fußball", "ans": "der", "eng": "football/soccer", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Fußball"}, {"type": "artikel", "q": "Montag", "ans": "der", "eng": "Monday", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Montag"}, {"type": "artikel", "q": "Ausgang", "ans": "der", "eng": "exit", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Ausgang"}, {"type": "artikel", "q": "April", "ans": "der", "eng": "April", "options": ["der", "die", "das"], "grp": "Months", "full": "der April"}, {"type": "artikel", "q": "Wasser", "ans": "das", "eng": "water", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Wasser"}, {"type": "artikel", "q": "Geschenk", "ans": "das", "eng": "gift/present", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Geschenk"}, {"type": "artikel", "q": "Handy", "ans": "das", "eng": "mobile phone", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Handy"}, {"type": "artikel", "q": "Anschluss", "ans": "der", "eng": "connection", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Anschluss"}, {"type": "artikel", "q": "Schwester", "ans": "die", "eng": "sister", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Schwester"}, {"type": "artikel", "q": "Hand", "ans": "die", "eng": "hand", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Hand"}, {"type": "artikel", "q": "Freitag", "ans": "der", "eng": "Friday", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Freitag"}, {"type": "artikel", "q": "Kind", "ans": "das", "eng": "child", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Kind"}, {"type": "artikel", "q": "Milch", "ans": "die", "eng": "milk", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Milch"}, {"type": "artikel", "q": "Januar", "ans": "der", "eng": "January", "options": ["der", "die", "das"], "grp": "Months", "full": "der Januar"}, {"type": "artikel", "q": "Gruß", "ans": "der", "eng": "greeting", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Gruß"}, {"type": "artikel", "q": "Ergebnis", "ans": "das", "eng": "result", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Ergebnis"}, {"type": "artikel", "q": "Mensch", "ans": "der", "eng": "person/human", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Mensch"}, {"type": "artikel", "q": "Farbe", "ans": "die", "eng": "color", "options": ["der", "die", "das"], "grp": "Clothing & Colors", "full": "die Farbe"}, {"type": "vocab", "q": "der Januar", "ans": "January", "options": [], "grp": "Months"}, {"type": "artikel", "q": "Februar", "ans": "der", "eng": "February", "options": ["der", "die", "das"], "grp": "Months", "full": "der Februar"}, {"type": "vocab", "q": "der Februar", "ans": "February", "options": [], "grp": "Months"}, {"type": "artikel", "q": "März", "ans": "der", "eng": "March", "options": ["der", "die", "das"], "grp": "Months", "full": "der März"}, {"type": "vocab", "q": "der März", "ans": "March", "options": [], "grp": "Months"}, {"type": "vocab", "q": "der April", "ans": "April", "options": [], "grp": "Months"}, {"type": "artikel", "q": "Mai", "ans": "der", "eng": "May", "options": ["der", "die", "das"], "grp": "Months", "full": "der Mai"}, {"type": "vocab", "q": "der Mai", "ans": "May", "options": [], "grp": "Months"}, {"type": "artikel", "q": "Juni", "ans": "der", "eng": "June", "options": ["der", "die", "das"], "grp": "Months", "full": "der Juni"}, {"type": "vocab", "q": "der Juni", "ans": "June", "options": [], "grp": "Months"}, {"type": "artikel", "q": "Juli", "ans": "der", "eng": "July", "options": ["der", "die", "das"], "grp": "Months", "full": "der Juli"}, {"type": "artikel", "q": "August", "ans": "der", "eng": "August", "options": ["der", "die", "das"], "grp": "Months", "full": "der August"}, {"type": "artikel", "q": "September", "ans": "der", "eng": "September", "options": ["der", "die", "das"], "grp": "Months", "full": "der September"}, {"type": "vocab", "q": "der September", "ans": "September", "options": [], "grp": "Months"}, {"type": "artikel", "q": "Oktober", "ans": "der", "eng": "October", "options": ["der", "die", "das"], "grp": "Months", "full": "der Oktober"}, {"type": "vocab", "q": "der Oktober", "ans": "October", "options": [], "grp": "Months"}, {"type": "artikel", "q": "November", "ans": "der", "eng": "November", "options": ["der", "die", "das"], "grp": "Months", "full": "der November"}, {"type": "artikel", "q": "Dezember", "ans": "der", "eng": "December", "options": ["der", "die", "das"], "grp": "Months", "full": "der Dezember"}, {"type": "vocab", "q": "der Dezember", "ans": "December", "options": [], "grp": "Months"}, {"type": "vocab", "q": "eins", "ans": "one", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "zwei", "ans": "two", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "drei", "ans": "three", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "vier", "ans": "four", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "fünf", "ans": "five", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "sechs", "ans": "six", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "acht", "ans": "eight", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "zehn", "ans": "ten", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "zwölf", "ans": "twelve", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "dreizehn", "ans": "thirteen", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "vierzehn", "ans": "fourteen", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "fünfzehn", "ans": "fifteen", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "sechzehn", "ans": "sixteen", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "siebzehn", "ans": "seventeen", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "achtzehn", "ans": "eighteen", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "neunzehn", "ans": "nineteen", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "zwanzig", "ans": "twenty", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "dreißig", "ans": "thirty", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "vierzig", "ans": "forty", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "fünfzig", "ans": "fifty", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "sechzig", "ans": "sixty", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "siebzig", "ans": "seventy", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "achtzig", "ans": "eighty", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "neunzig", "ans": "ninety", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "tausend", "ans": "thousand", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "eine Million", "ans": "one million", "options": [], "grp": "Numbers"}, {"type": "vocab", "q": "die Farbe", "ans": "color", "options": [], "grp": "Clothing & Colors"}, {"type": "artikel", "q": "Jacke", "ans": "die", "eng": "jacket", "options": ["der", "die", "das"], "grp": "Clothing & Colors", "full": "die Jacke"}, {"type": "vocab", "q": "die Jacke", "ans": "jacket", "options": [], "grp": "Clothing & Colors"}, {"type": "artikel", "q": "Kleidung", "ans": "die", "eng": "clothing", "options": ["der", "die", "das"], "grp": "Clothing & Colors", "full": "die Kleidung"}, {"type": "vocab", "q": "die Kleidung", "ans": "clothing", "options": [], "grp": "Clothing & Colors"}, {"type": "artikel", "q": "Schuh", "ans": "der", "eng": "shoe", "options": ["der", "die", "das"], "grp": "Clothing & Colors", "full": "der Schuh"}, {"type": "vocab", "q": "der Schuh", "ans": "shoe", "options": [], "grp": "Clothing & Colors"}, {"type": "vocab", "q": "was", "ans": "what", "options": [], "grp": "Clothing & Colors"}, {"type": "vocab", "q": "was für ein", "ans": "what kind of", "options": [], "grp": "Clothing & Colors"}, {"type": "vocab", "q": "schwarz", "ans": "black", "options": [], "grp": "Clothing & Colors"}, {"type": "vocab", "q": "weiß", "ans": "white", "options": [], "grp": "Clothing & Colors"}, {"type": "vocab", "q": "grau", "ans": "grey", "options": [], "grp": "Clothing & Colors"}, {"type": "vocab", "q": "rot", "ans": "red", "options": [], "grp": "Clothing & Colors"}, {"type": "vocab", "q": "gelb", "ans": "yellow", "options": [], "grp": "Clothing & Colors"}, {"type": "vocab", "q": "grün", "ans": "green", "options": [], "grp": "Clothing & Colors"}, {"type": "vocab", "q": "braun", "ans": "brown", "options": [], "grp": "Clothing & Colors"}, {"type": "vocab", "q": "also", "ans": "so/well", "options": [], "grp": "Common Adverbs"}, {"type": "vocab", "q": "bald", "ans": "soon", "options": [], "grp": "Common Adverbs"}, {"type": "vocab", "q": "circa", "ans": "approximately", "options": [], "grp": "Common Adverbs"}, {"type": "vocab", "q": "da", "ans": "there/here", "options": [], "grp": "Common Adverbs"}, {"type": "vocab", "q": "dann", "ans": "then", "options": [], "grp": "Common Adverbs"}, {"type": "vocab", "q": "gerade", "ans": "just (now)", "options": [], "grp": "Common Adverbs"}, {"type": "vocab", "q": "gerne", "ans": "gladly/with pleasure", "options": [], "grp": "Common Adverbs"}, {"type": "vocab", "q": "gleich", "ans": "very soon / in a moment", "options": [], "grp": "Common Adverbs"}, {"type": "vocab", "q": "hier", "ans": "here", "options": [], "grp": "Common Adverbs"}, {"type": "vocab", "q": "lieber", "ans": "rather/preferably", "options": [], "grp": "Common Adverbs"}, {"type": "vocab", "q": "links", "ans": "left", "options": [], "grp": "Common Adverbs"}, {"type": "vocab", "q": "nie", "ans": "never", "options": [], "grp": "Common Adverbs"}, {"type": "vocab", "q": "oben", "ans": "above/upstairs", "options": [], "grp": "Common Adverbs"}, {"type": "vocab", "q": "oft", "ans": "often", "options": [], "grp": "Common Adverbs"}, {"type": "vocab", "q": "rechts", "ans": "right", "options": [], "grp": "Adverb"}, {"type": "vocab", "q": "schon", "ans": "already", "options": [], "grp": "Adverb"}, {"type": "vocab", "q": "sehr", "ans": "very", "options": [], "grp": "Adverb"}, {"type": "vocab", "q": "so", "ans": "so/like this", "options": [], "grp": "Adverb"}, {"type": "vocab", "q": "sofort", "ans": "immediately", "options": [], "grp": "Adverb"}, {"type": "vocab", "q": "unten", "ans": "below/downstairs", "options": [], "grp": "Adverb"}, {"type": "vocab", "q": "vielleicht", "ans": "maybe/perhaps", "options": [], "grp": "Adverb"}, {"type": "vocab", "q": "warum", "ans": "why", "options": [], "grp": "Adverb"}, {"type": "vocab", "q": "wo", "ans": "where", "options": [], "grp": "Adverb"}, {"type": "vocab", "q": "woher", "ans": "where from", "options": [], "grp": "Adverb"}, {"type": "vocab", "q": "wohin", "ans": "where to", "options": [], "grp": "Adverb"}, {"type": "vocab", "q": "anrufen", "ans": "to call (phone)", "options": [], "grp": "Verb"}, {"type": "artikel", "q": "Anruf", "ans": "der", "eng": "phone call", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Anruf"}, {"type": "vocab", "q": "der Anruf", "ans": "phone call", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "bitte", "ans": "please", "options": [], "grp": "Particle"}, {"type": "artikel", "q": "Bitte", "ans": "die", "eng": "request", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Bitte"}, {"type": "vocab", "q": "die Bitte", "ans": "request", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "bitter", "ans": "bitter", "options": [], "grp": "Adjective"}, {"type": "artikel", "q": "Brief", "ans": "der", "eng": "letter", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Brief"}, {"type": "vocab", "q": "der Brief", "ans": "letter", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Briefmarke", "ans": "die", "eng": "stamp", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Briefmarke"}, {"type": "vocab", "q": "die Briefmarke", "ans": "stamp", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Dank", "ans": "der", "eng": "thanks", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Dank"}, {"type": "vocab", "q": "der Dank", "ans": "thanks", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "danke", "ans": "thank you", "options": [], "grp": "Interjection"}, {"type": "artikel", "q": "Entschuldigung", "ans": "die", "eng": "excuse/apology", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Entschuldigung"}, {"type": "vocab", "q": "die Entschuldigung", "ans": "excuse/apology", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "hallo", "ans": "hello", "options": [], "grp": "Interjection"}, {"type": "vocab", "q": "das Handy", "ans": "mobile phone", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "sagen", "ans": "to say/tell", "options": [], "grp": "Verb"}, {"type": "artikel", "q": "Telefon", "ans": "das", "eng": "telephone", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Telefon"}, {"type": "vocab", "q": "abfahren", "ans": "to depart", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "abgeben", "ans": "to hand in", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "Achtung", "ans": "attention/caution", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "anbieten", "ans": "to offer", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "anklicken", "ans": "to click on", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "ankommen", "ans": "to arrive", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "ankreuzen", "ans": "to mark/tick", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "anmachen", "ans": "to turn on", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "sich anmelden", "ans": "to register", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "an sein", "ans": "to be on", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "sich anziehen", "ans": "to get dressed", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "aufhören", "ans": "to stop/end", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "aufstehen", "ans": "to get up", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "ausfüllen", "ans": "to fill out", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "ausmachen", "ans": "to turn off", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "aussehen", "ans": "to look/appear", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "aus sein", "ans": "to be off/over", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "aussteigen", "ans": "to get off", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "sich ausziehen", "ans": "to undress/take off", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "bedeuten", "ans": "to mean", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "beginnen", "ans": "to begin", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "bekommen", "ans": "to get/receive", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "besichtigen", "ans": "to visit/sightsee", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "bestellen", "ans": "to order", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "besuchen", "ans": "to visit", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "bisschen", "ans": "a little bit", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "der Montag", "ans": "Monday", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Dienstag", "ans": "der", "eng": "Tuesday", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Dienstag"}, {"type": "vocab", "q": "der Dienstag", "ans": "Tuesday", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Mittwoch", "ans": "der", "eng": "Wednesday", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Mittwoch"}, {"type": "vocab", "q": "der Mittwoch", "ans": "Wednesday", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Donnerstag", "ans": "der", "eng": "Thursday", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Donnerstag"}, {"type": "vocab", "q": "der Donnerstag", "ans": "Thursday", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "der Freitag", "ans": "Friday", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Samstag/Sonnabend", "ans": "der", "eng": "Saturday", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Samstag/Sonnabend"}, {"type": "vocab", "q": "der Samstag/Sonnabend", "ans": "Saturday", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Sonntag", "ans": "der", "eng": "Sunday", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Sonntag"}, {"type": "artikel", "q": "Wochenende", "ans": "das", "eng": "weekend", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Wochenende"}, {"type": "artikel", "q": "Automat", "ans": "der", "eng": "machine/vending machine", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Automat"}, {"type": "vocab", "q": "der Automat", "ans": "machine/vending machine", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Bruder", "ans": "der", "eng": "brother", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Bruder"}, {"type": "vocab", "q": "der Bruder", "ans": "brother", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Ehefrau / der Ehemann", "ans": "die", "eng": "wife / husband", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Ehefrau / der Ehemann"}, {"type": "vocab", "q": "die Ehefrau / der Ehemann", "ans": "wife / husband", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Eltern", "ans": "die", "eng": "parents", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Eltern"}, {"type": "vocab", "q": "die Eltern", "ans": "parents", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Familie", "ans": "die", "eng": "family", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Familie"}, {"type": "vocab", "q": "die Familie", "ans": "family", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Familienname", "ans": "der", "eng": "family name/surname", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Familienname"}, {"type": "vocab", "q": "der Familienname", "ans": "family name/surname", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Frau", "ans": "die", "eng": "woman/wife/Mrs.", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Frau"}, {"type": "vocab", "q": "die Frau", "ans": "woman/wife/Mrs.", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Freund", "ans": "der", "eng": "friend/boyfriend", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Freund"}, {"type": "artikel", "q": "Großeltern", "ans": "die", "eng": "grandparents", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Großeltern"}, {"type": "artikel", "q": "Großmutter", "ans": "die", "eng": "grandmother", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Großmutter"}, {"type": "vocab", "q": "die Großmutter", "ans": "grandmother", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "werden", "ans": "to become", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "willkommen", "ans": "welcome", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "wissen", "ans": "to know (a fact)", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "wohnen", "ans": "to live/reside", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "zufrieden", "ans": "satisfied", "options": [], "grp": "Verb"}, {"type": "artikel", "q": "Leute", "ans": "die", "eng": "people", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Leute"}, {"type": "vocab", "q": "die Leute", "ans": "people", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Lied", "ans": "das", "eng": "song", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Lied"}, {"type": "vocab", "q": "man", "ans": "one/you (impersonal)", "options": [], "grp": "Pronoun"}, {"type": "artikel", "q": "Mann", "ans": "der", "eng": "man/husband", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Mann"}, {"type": "vocab", "q": "der Mann", "ans": "man/husband", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Mutter", "ans": "die", "eng": "mother", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Mutter"}, {"type": "artikel", "q": "Oma", "ans": "die", "eng": "grandma", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Oma"}, {"type": "vocab", "q": "die Oma", "ans": "grandma", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Opa", "ans": "der", "eng": "grandpa", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Opa"}, {"type": "vocab", "q": "der Opa", "ans": "grandpa", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "die Schwester", "ans": "sister", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Sohn", "ans": "der", "eng": "son", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Sohn"}, {"type": "artikel", "q": "Tochter", "ans": "die", "eng": "daughter", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Tochter"}, {"type": "vocab", "q": "die Tochter", "ans": "daughter", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Tomate", "ans": "die", "eng": "tomato", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Tomate"}, {"type": "vocab", "q": "die Tomate", "ans": "tomato", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Großvater", "ans": "der", "eng": "grandfather", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Großvater"}, {"type": "vocab", "q": "der Großvater", "ans": "grandfather", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Hausfrau / der Hausmann", "ans": "die", "eng": "housewife / househusband", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Hausfrau / der Hausmann"}, {"type": "vocab", "q": "die Hausfrau / der Hausmann", "ans": "housewife / househusband", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Jugendliche", "ans": "der", "eng": "young person/teenager", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Jugendliche"}, {"type": "vocab", "q": "der Jugendliche", "ans": "young person/teenager", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "kennen", "ans": "to know (a person/thing)", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "das Kind", "ans": "child", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Kindergarten", "ans": "der", "eng": "kindergarten", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Kindergarten"}, {"type": "vocab", "q": "brauchen", "ans": "to need", "options": [], "grp": "Verb"}, {"type": "artikel", "q": "Vater", "ans": "der", "eng": "father", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Vater"}, {"type": "artikel", "q": "Verkäufer", "ans": "der", "eng": "salesperson", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Verkäufer"}, {"type": "vocab", "q": "der Verkäufer", "ans": "salesperson", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "der/die Verwandte", "ans": "relative", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Apfel", "ans": "der", "eng": "apple", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Apfel"}, {"type": "vocab", "q": "der Apfel", "ans": "apple", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Banane", "ans": "die", "eng": "banana", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Banane"}, {"type": "vocab", "q": "bringen", "ans": "to bring", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "daneben", "ans": "next to it", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "danken", "ans": "to thank", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "dauern", "ans": "to last/take (time)", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "dort/dorthin/dorther", "ans": "there/to there", "options": [], "grp": "Adverb"}, {"type": "vocab", "q": "drucken", "ans": "to print", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "drücken", "ans": "to press/push", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "dürfen", "ans": "to be allowed to", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "sich duschen", "ans": "to shower", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "einsteigen", "ans": "to get on/board", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "empfehlen", "ans": "to recommend", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "entschuldigen", "ans": "to excuse", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "erklären", "ans": "to explain", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "erzählen", "ans": "to tell/narrate", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "essen", "ans": "to eat", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "fahren", "ans": "to drive/go", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "feiern", "ans": "to celebrate", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "fehlen", "ans": "to be missing/absent", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "fernsehen", "ans": "to watch TV", "options": [], "grp": "Verb"}, {"type": "artikel", "q": "Brot", "ans": "das", "eng": "bread", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Brot"}, {"type": "vocab", "q": "das Brot", "ans": "bread", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Brötchen", "ans": "das", "eng": "bread roll", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Brötchen"}, {"type": "vocab", "q": "das Brötchen", "ans": "bread roll", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Essen", "ans": "das", "eng": "food/meal", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Essen"}, {"type": "vocab", "q": "das Essen", "ans": "food/meal", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Fisch", "ans": "der", "eng": "fish", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Fisch"}, {"type": "vocab", "q": "der Fisch", "ans": "fish", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Fleisch", "ans": "das", "eng": "meat", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Fleisch"}, {"type": "vocab", "q": "das Fleisch", "ans": "meat", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "frühstücken", "ans": "to have breakfast", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "fliegen", "ans": "to fly", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "abfliegen", "ans": "to take off/depart", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "fragen", "ans": "to ask", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "sich freuen", "ans": "to be happy/look forward to", "options": [], "grp": "Verb"}, {"type": "artikel", "q": "Frühstück", "ans": "das", "eng": "breakfast", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Frühstück"}, {"type": "vocab", "q": "das Frühstück", "ans": "breakfast", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Gemüse", "ans": "das", "eng": "vegetables", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Gemüse"}, {"type": "vocab", "q": "das Gemüse", "ans": "vegetables", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Getränk", "ans": "das", "eng": "drink/beverage", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Getränk"}, {"type": "vocab", "q": "das Getränk", "ans": "drink/beverage", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Kaffee", "ans": "der", "eng": "coffee", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Kaffee"}, {"type": "vocab", "q": "der Kaffee", "ans": "coffee", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Lebensmittel", "ans": "die", "eng": "groceries/food", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Lebensmittel"}, {"type": "vocab", "q": "die Lebensmittel", "ans": "groceries/food", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "die Milch", "ans": "milk", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "geben", "ans": "to give", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "gefallen", "ans": "to please/like", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "gehen", "ans": "to go/walk", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "gehören", "ans": "to belong to", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "gestorben", "ans": "deceased/died", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "gewinnen", "ans": "to win", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "glauben", "ans": "to believe/think", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "gratulieren", "ans": "to congratulate", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "grillen", "ans": "to grill/barbecue", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "haben", "ans": "to have", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "halten", "ans": "to stop/hold", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "heiraten", "ans": "to marry", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "heißen", "ans": "to be called", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "groß", "ans": "big/tall", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "gültig", "ans": "valid", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "hell", "ans": "bright/light", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "hoch", "ans": "high/tall", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "hinten", "ans": "at the back", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "holen", "ans": "to fetch/get", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "hören", "ans": "to hear/listen", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "kaufen", "ans": "to buy", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "kochen", "ans": "to cook", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "können", "ans": "can/to be able to", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "kriegen", "ans": "to get (informal)", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "lachen", "ans": "to laugh", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "laufen", "ans": "to walk/run", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "leben", "ans": "to live", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "legen", "ans": "to lay/put", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "lernen", "ans": "to learn", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "lesen", "ans": "to read", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "lieben", "ans": "to love", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "mieten", "ans": "to rent", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "mitbringen", "ans": "to bring along", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "mitmachen", "ans": "to participate", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "möchten", "ans": "would like", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "müssen", "ans": "must/to have to", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "öffnen", "ans": "to open", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "Rad fahren", "ans": "to cycle", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "rauchen", "ans": "to smoke", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "regnen", "ans": "to rain", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "reparieren", "ans": "to repair", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "riechen", "ans": "to smell", "options": [], "grp": "Verb"}, {"type": "artikel", "q": "Obst", "ans": "das", "eng": "fruit", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Obst"}, {"type": "artikel", "q": "Preis", "ans": "der", "eng": "price", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Preis"}, {"type": "vocab", "q": "der Preis", "ans": "price", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Reis", "ans": "der", "eng": "rice", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Reis"}, {"type": "vocab", "q": "der Reis", "ans": "rice", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Reise", "ans": "die", "eng": "trip/journey", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Reise"}, {"type": "artikel", "q": "Salz", "ans": "das", "eng": "salt", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Salz"}, {"type": "artikel", "q": "Tee", "ans": "der", "eng": "tea", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Tee"}, {"type": "vocab", "q": "der Tee", "ans": "tea", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "scheinen", "ans": "to shine/seem", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "schicken", "ans": "to send", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "schlafen", "ans": "to sleep", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "schließen", "ans": "to close", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "geschlossen", "ans": "closed", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "schmecken", "ans": "to taste", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "schwimmen", "ans": "to swim", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "sehen", "ans": "to see", "options": [], "grp": "Verb"}, {"type": "artikel", "q": "Sehenswürdigkeit", "ans": "die", "eng": "sight/attraction", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Sehenswürdigkeit"}, {"type": "vocab", "q": "sitzen", "ans": "to sit", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "sollen", "ans": "should/shall", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "spielen", "ans": "to play", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "stehen", "ans": "to stand/be (written)", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "studieren", "ans": "to study (university)", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "das Wasser", "ans": "water", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "ausländisch", "ans": "foreign", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "bekannt", "ans": "well-known/famous", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "besser", "ans": "better", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "best-", "ans": "best", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "suchen", "ans": "to search/look for", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "tanzen", "ans": "to dance", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "trinken", "ans": "to drink", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "tun", "ans": "to do", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "übernachten", "ans": "to stay overnight", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "überweisen", "ans": "to transfer (money)", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "umziehen", "ans": "to move (house)", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "unterschreiben", "ans": "to sign", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "verboten", "ans": "forbidden", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "verdienen", "ans": "to earn", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "verkaufen", "ans": "to sell", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "warten", "ans": "to wait", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "sich waschen", "ans": "to wash", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "weh tun", "ans": "to hurt", "options": [], "grp": "Verb"}, {"type": "vocab", "q": "böse", "ans": "angry/mad", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "breit", "ans": "wide", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "falsch", "ans": "wrong/false", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "fertig", "ans": "finished/ready", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "fremd", "ans": "foreign/strange", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "international", "ans": "international", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "jed-", "ans": "every/each", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "kaputt", "ans": "broken", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "kulturell", "ans": "cultural", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "lang", "ans": "long", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "laut", "ans": "loud", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "ledig", "ans": "single/unmarried", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "letzt-", "ans": "last", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "Lieblings-", "ans": "favorite", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "männlich", "ans": "male", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "meist-", "ans": "most", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "nächst-", "ans": "next", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "neu", "ans": "new", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "normal", "ans": "normal", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "geöffnet", "ans": "open (adj.)", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "richtig", "ans": "correct/right", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "ruhig", "ans": "quiet/calm", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "schlecht", "ans": "bad", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "schnell", "ans": "fast/quick", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "schwer", "ans": "heavy/difficult", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "selbstständig", "ans": "self-employed", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "unser-", "ans": "our", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "verheiratet", "ans": "married", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "weiblich", "ans": "female", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "weit", "ans": "far", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "welch-", "ans": "which", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "wenig", "ans": "little/few", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "wichtig", "ans": "important", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "Grad", "ans": "degree", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "aber", "ans": "but", "options": [], "grp": "Conjunction"}, {"type": "artikel", "q": "Absender", "ans": "der", "eng": "sender", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Absender"}, {"type": "vocab", "q": "der Absender", "ans": "sender", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "all", "ans": "all/everything", "options": [], "grp": "Pronoun"}, {"type": "vocab", "q": "allein", "ans": "alone", "options": [], "grp": "Adverb"}, {"type": "vocab", "q": "an", "ans": "at/on", "options": [], "grp": "Preposition"}, {"type": "artikel", "q": "Angebot", "ans": "das", "eng": "offer/deal", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Angebot"}, {"type": "vocab", "q": "ander", "ans": "other/different", "options": [], "grp": "Adjective"}, {"type": "artikel", "q": "Anfang", "ans": "der", "eng": "beginning", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Anfang"}, {"type": "vocab", "q": "der Anfang", "ans": "beginning", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Anmeldung", "ans": "die", "eng": "registration", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Anmeldung"}, {"type": "vocab", "q": "die Anmeldung", "ans": "registration", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Anrede", "ans": "die", "eng": "salutation", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Anrede"}, {"type": "vocab", "q": "die Anrede", "ans": "salutation", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Ansage", "ans": "die", "eng": "announcement", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Ansage"}, {"type": "vocab", "q": "die Ansage", "ans": "announcement", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Anzeige", "ans": "die", "eng": "advertisement/ad", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Anzeige"}, {"type": "vocab", "q": "die Anzeige", "ans": "advertisement/ad", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Appetit", "ans": "der", "eng": "appetite", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Appetit"}, {"type": "vocab", "q": "der Appetit", "ans": "appetite", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "auf", "ans": "on/open", "options": [], "grp": "Preposition"}, {"type": "artikel", "q": "Aufzug", "ans": "der", "eng": "elevator", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Aufzug"}, {"type": "vocab", "q": "der Ausgang", "ans": "exit", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Dame", "ans": "die", "eng": "lady", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Dame"}, {"type": "vocab", "q": "die Dame", "ans": "lady", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "dein-", "ans": "your (informal)", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "denn", "ans": "because/for", "options": [], "grp": "Conjunction"}, {"type": "vocab", "q": "der/die/das", "ans": "the", "options": [], "grp": "Article"}, {"type": "vocab", "q": "dich", "ans": "you (accusative)", "options": [], "grp": "Pronoun"}, {"type": "vocab", "q": "dies-", "ans": "this/these", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "dir", "ans": "you (dative)", "options": [], "grp": "Pronoun"}, {"type": "artikel", "q": "Disco", "ans": "die", "eng": "disco/club", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Disco"}, {"type": "vocab", "q": "die Disco", "ans": "disco/club", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Drucker", "ans": "der", "eng": "printer", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Drucker"}, {"type": "artikel", "q": "Durchsage", "ans": "die", "eng": "announcement", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Durchsage"}, {"type": "vocab", "q": "die Durchsage", "ans": "announcement", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Durst", "ans": "der", "eng": "thirst", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Durst"}, {"type": "artikel", "q": "Dusche", "ans": "die", "eng": "shower", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Dusche"}, {"type": "vocab", "q": "die Dusche", "ans": "shower", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Ecke", "ans": "die", "eng": "corner", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Ecke"}, {"type": "artikel", "q": "Ei", "ans": "das", "eng": "egg", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Ei"}, {"type": "vocab", "q": "das Ei", "ans": "egg", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "ein-", "ans": "one/a", "options": [], "grp": "Adjective"}, {"type": "vocab", "q": "einfach", "ans": "simple/easy; single", "options": [], "grp": "Adjective"}, {"type": "artikel", "q": "Eingang", "ans": "der", "eng": "entrance", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Eingang"}, {"type": "vocab", "q": "der Eingang", "ans": "entrance", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Einladung", "ans": "die", "eng": "invitation", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Einladung"}, {"type": "vocab", "q": "die Einladung", "ans": "invitation", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Eintritt", "ans": "der", "eng": "entry/admission", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Eintritt"}, {"type": "vocab", "q": "der Eintritt", "ans": "entry/admission", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Einzelzimmer", "ans": "das", "eng": "single room", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Einzelzimmer"}, {"type": "vocab", "q": "das Einzelzimmer", "ans": "single room", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Empfänger", "ans": "der", "eng": "recipient", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Empfänger"}, {"type": "vocab", "q": "der Empfänger", "ans": "recipient", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Ende", "ans": "das", "eng": "end", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Ende"}, {"type": "vocab", "q": "das Ende", "ans": "end", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "er", "ans": "he", "options": [], "grp": "Pronoun"}, {"type": "vocab", "q": "das Ergebnis", "ans": "result", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Erwachsene", "ans": "der", "eng": "adult", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Erwachsene"}, {"type": "vocab", "q": "der Erwachsene", "ans": "adult", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "es", "ans": "it", "options": [], "grp": "Pronoun"}, {"type": "vocab", "q": "euer", "ans": "your (plural informal)", "options": [], "grp": "Pronoun"}, {"type": "artikel", "q": "Familienstand", "ans": "der", "eng": "marital status", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Familienstand"}, {"type": "vocab", "q": "der Familienstand", "ans": "marital status", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Fax", "ans": "das", "eng": "fax", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Fax"}, {"type": "vocab", "q": "das Fax", "ans": "fax", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Fehler", "ans": "der", "eng": "mistake/error", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Fehler"}, {"type": "vocab", "q": "der Fehler", "ans": "mistake/error", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "der Film", "ans": "film/movie", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Flasche", "ans": "die", "eng": "bottle", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Flasche"}, {"type": "vocab", "q": "die Flasche", "ans": "bottle", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "das Formular", "ans": "form (document)", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "die Führung", "ans": "guided tour", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "für", "ans": "for", "options": [], "grp": "Preposition"}, {"type": "artikel", "q": "Fuß", "ans": "der", "eng": "foot", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Fuß"}, {"type": "vocab", "q": "der Fuß", "ans": "foot", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "der Fußball", "ans": "football/soccer", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Garten", "ans": "der", "eng": "garden", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Garten"}, {"type": "vocab", "q": "der Garten", "ans": "garden", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Gast", "ans": "der", "eng": "guest", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Gast"}, {"type": "vocab", "q": "der Gast", "ans": "guest", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "gegen", "ans": "against/around", "options": [], "grp": "Preposition"}, {"type": "artikel", "q": "Gepäck", "ans": "das", "eng": "luggage", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Gepäck"}, {"type": "vocab", "q": "das Gepäck", "ans": "luggage", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "das Geschenk", "ans": "gift/present", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Geschwister", "ans": "die", "eng": "siblings", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Geschwister"}, {"type": "artikel", "q": "Gespräch", "ans": "das", "eng": "conversation", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Gespräch"}, {"type": "vocab", "q": "das Gespräch", "ans": "conversation", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Gewicht", "ans": "das", "eng": "weight", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Gewicht"}, {"type": "vocab", "q": "das Gewicht", "ans": "weight", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Glas", "ans": "das", "eng": "glass", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Glas"}, {"type": "vocab", "q": "das Glas", "ans": "glass", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Gleis", "ans": "das", "eng": "track/platform", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Gleis"}, {"type": "vocab", "q": "das Gleis", "ans": "track/platform", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Glück", "ans": "das", "eng": "luck/happiness", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Glück"}, {"type": "vocab", "q": "das Glück", "ans": "luck/happiness", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Glückwunsch", "ans": "der", "eng": "congratulations", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Glückwunsch"}, {"type": "vocab", "q": "der Glückwunsch", "ans": "congratulations", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Größe", "ans": "die", "eng": "size", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Größe"}, {"type": "vocab", "q": "die Größe", "ans": "size", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Haar", "ans": "das", "eng": "hair", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Haar"}, {"type": "vocab", "q": "das Haar", "ans": "hair", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Hähnchen", "ans": "das", "eng": "chicken", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Hähnchen"}, {"type": "vocab", "q": "das Hähnchen", "ans": "chicken", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "die Halbpension", "ans": "half board", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Halle", "ans": "die", "eng": "hall", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Halle"}, {"type": "vocab", "q": "die Halle", "ans": "hall", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "die Hand", "ans": "hand", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Heimat", "ans": "die", "eng": "homeland", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Heimat"}, {"type": "vocab", "q": "nicht", "ans": "not", "options": [], "grp": "Particle"}, {"type": "vocab", "q": "nichts", "ans": "nothing", "options": [], "grp": "Pronoun"}, {"type": "artikel", "q": "Nummer", "ans": "die", "eng": "number", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Nummer"}, {"type": "vocab", "q": "die Nummer", "ans": "number", "options": [], "grp": "Noun"}, {"type": "vocab", "q": "oder", "ans": "or", "options": [], "grp": "Conjunction"}, {"type": "vocab", "q": "ohne", "ans": "without", "options": [], "grp": "Preposition"}, {"type": "artikel", "q": "Öl", "ans": "das", "eng": "oil", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Öl"}, {"type": "vocab", "q": "das Öl", "ans": "oil", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Ordnung", "ans": "die", "eng": "order", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Ordnung"}, {"type": "vocab", "q": "die Ordnung", "ans": "order", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Papier", "ans": "das", "eng": "paper", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Papier"}, {"type": "vocab", "q": "das Papier", "ans": "paper", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Papiere", "ans": "die", "eng": "documents/papers", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Papiere"}, {"type": "vocab", "q": "die Papiere", "ans": "documents/papers", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Partner / die Partnerin", "ans": "der", "eng": "partner", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Partner / die Partnerin"}, {"type": "vocab", "q": "der Partner / die Partnerin", "ans": "partner", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Party", "ans": "die", "eng": "party", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Party"}, {"type": "vocab", "q": "die Party", "ans": "party", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Pass", "ans": "der", "eng": "passport", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Pass"}, {"type": "vocab", "q": "der Pass", "ans": "passport", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Pause", "ans": "die", "eng": "break/pause", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Pause"}, {"type": "vocab", "q": "die Pause", "ans": "break/pause", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Plan", "ans": "der", "eng": "plan/map", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Plan"}, {"type": "vocab", "q": "der Plan", "ans": "plan/map", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Pommes frites", "ans": "die", "eng": "French fries", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Pommes frites"}, {"type": "vocab", "q": "die Pommes frites", "ans": "French fries", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Praktikum", "ans": "das", "eng": "internship", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Praktikum"}, {"type": "vocab", "q": "das Praktikum", "ans": "internship", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Problem", "ans": "das", "eng": "problem", "options": ["der", "die", "das"], "grp": "Noun", "full": "das Problem"}, {"type": "vocab", "q": "das Problem", "ans": "problem", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Prospekt", "ans": "der", "eng": "brochure", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Prospekt"}, {"type": "vocab", "q": "der Prospekt", "ans": "brochure", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Reparatur", "ans": "die", "eng": "repair", "options": ["der", "die", "das"], "grp": "Noun", "full": "die Reparatur"}, {"type": "vocab", "q": "die Reparatur", "ans": "repair", "options": [], "grp": "Noun"}, {"type": "artikel", "q": "Saft", "ans": "der", "eng": "juice", "options": ["der", "die", "das"], "grp": "Noun", "full": "der Saft"}, {"type": "vocab", "q": "der Saft", "ans": "juice", "options": [], "grp": "Noun"}];
+
+        // ===== STATE =====
+        let userWords = JSON.parse(localStorage.getItem('germanQuizUserWords') || '[]');
+        let selectedCount = 0; // 0 = ALL
+        let questions = [];
+        let currentIdx = 0;
+        let score = 0;
+        let wrongCount = 0;
+        let locked = false;
+        let isSlow = false;
+        let addType = 'vocab';
+        const synth = window.speechSynthesis;
+
+        // ===== INIT =====
+        updatePoolCount();
+        renderAddedList();
+
+        function getAllWords() {
+            return [...baseQuestions, ...userWords];
+        }
+
+        function updatePoolCount() {
+            document.getElementById('pool-count').textContent = getAllWords().length;
+            const vocabCount = getAllWords().filter(w => w.type === 'vocab').length;
+            const artikelCount = getAllWords().filter(w => w.type === 'artikel').length;
+            document.getElementById('subtitle-info').textContent =
+                `${getAllWords().length} words · ${vocabCount} vocab + ${artikelCount} artikel · Listen & Choose`;
+        }
+
+        // ===== CHOOSE COUNT =====
+        function selectCount(count, btn) {
+            document.querySelectorAll('.num-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            selectedCount = count;
+            document.getElementById('custom-count').value = '';
+        }
+
+        function customCountInput(input) {
+            const v = parseInt(input.value);
+            if (v > 0) {
+                document.querySelectorAll('.num-btn').forEach(b => b.classList.remove('selected'));
+                selectedCount = v;
+            }
+        }
+
+        // ===== GENERATE OPTIONS =====
+        function generateOptions(correctAns, type, allWords) {
+            const sameType = allWords.filter(w => w.type === type);
+            const pool = sameType.map(w => w.ans).filter(a => a !== correctAns);
+            const unique = [...new Set(pool)];
+            shuffleArray(unique);
+            const wrongOpts = unique.slice(0, type === 'artikel' ? 2 : 3);
+            const opts = [...wrongOpts, correctAns];
+            shuffleArray(opts);
+            return opts;
+        }
+
+        // ===== START QUIZ =====
+        function startQuiz() {
+            const all = getAllWords();
+            shuffleArray(all);
+
+            let count = selectedCount === 0 ? all.length : Math.min(selectedCount, all.length);
+            questions = all.slice(0, count);
+
+            // Regenerate options so new words integrate properly
+            questions.forEach(q => {
+                q.options = generateOptions(q.ans, q.type, getAllWords());
+            });
+
+            currentIdx = 0;
+            score = 0;
+            wrongCount = 0;
+            locked = false;
+
+            document.getElementById('setup-screen').style.display = 'none';
+            document.getElementById('quiz-area').style.display = 'block';
+            document.getElementById('result-area').style.display = 'none';
+            document.getElementById('stats-bar').style.display = 'block';
+            document.getElementById('count-correct').textContent = '0';
+            document.getElementById('count-wrong').textContent = '0';
+
+            renderQuestion();
+        }
+
+        // ===== RENDER QUESTION =====
+        function renderQuestion() {
+            if (currentIdx >= questions.length) return endQuiz();
+            locked = false;
+            const q = questions[currentIdx];
+            const isArt = q.type === 'artikel';
+            const total = questions.length;
+
+            document.getElementById('q-label').textContent = `QUESTION ${currentIdx + 1} / ${total} · ${isArt ? 'ARTIKEL' : 'VOCAB'}`;
+            document.getElementById('q-badge').textContent = q.grp;
+            document.getElementById('q-badge').style.borderColor = isArt ? '#ff9f43' : 'var(--accent-purple)';
+            document.getElementById('q-badge').style.color = isArt ? '#ff9f43' : 'var(--accent-purple)';
+
+            const dynContent = document.getElementById('dynamic-content');
+            if (isArt) {
+                dynContent.innerHTML = `
+                    <div class="audio-section" style="min-height: auto;">
+                        <div class="text-question" id="art-text">___ ${q.q}</div>
+                        <div class="text-sub">${q.eng}</div>
+                    </div>`;
+            } else {
+                dynContent.innerHTML = `
+                    <div class="audio-section">
+                        <button class="speaker-btn" onclick="speakCurrent()">🔊</button>
+                        <div class="speed-toggle" id="speed-toggle">
+                            <button id="btn-slow" class="speed-btn ${isSlow ? 'active':''}" onclick="toggleSpeed(true)">Slow</button>
+                            <button id="btn-norm" class="speed-btn ${!isSlow ? 'active':''}" onclick="toggleSpeed(false)">Normal</button>
+                        </div>
+                        <div id="vocab-reveal" class="text-question" style="display:none; margin-top:20px; color: var(--accent-cyan);"></div>
+                    </div>`;
+                setTimeout(speakCurrent, 300);
+            }
+
+            const optsDiv = document.getElementById('options');
+            optsDiv.innerHTML = '';
+            optsDiv.style.gridTemplateColumns = isArt ? '1fr 1fr 1fr' : '1fr 1fr';
+
+            q.options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = 'opt-btn';
+                btn.textContent = opt;
+                btn.onclick = () => checkAns(btn, opt, q.ans, isArt);
+                optsDiv.appendChild(btn);
+            });
+
+            document.getElementById('footer-actions').innerHTML = `
+                <button class="action-btn" onclick="showAns()">Show Answer</button>
+                <button class="action-btn" onclick="skip()">Skip →</button>
+            `;
+        }
+
+        // ===== SPEECH =====
+        function toggleSpeed(slow) {
+            isSlow = slow;
+            document.getElementById('btn-slow').classList.toggle('active', slow);
+            document.getElementById('btn-norm').classList.toggle('active', !slow);
+            speakCurrent();
+        }
+
+        function speakCurrent() {
+            const q = questions[currentIdx];
+            if (q.type !== 'vocab') return;
+            if (synth.speaking) synth.cancel();
+            const utter = new SpeechSynthesisUtterance(q.q);
+            utter.lang = 'de-DE';
+            utter.rate = isSlow ? 0.5 : 1.0;
+            synth.speak(utter);
+        }
+
+        function revealWord() {
+            const q = questions[currentIdx];
+            if (q.type === 'artikel') {
+                document.getElementById('art-text').textContent = q.full;
+            } else {
+                const reveal = document.getElementById('vocab-reveal');
+                reveal.textContent = q.q;
+                reveal.style.display = 'block';
+                const st = document.getElementById('speed-toggle');
+                if (st) st.style.display = 'none';
+            }
+        }
+
+        // ===== ANSWER LOGIC =====
+        function checkAns(btn, selected, correct, isArt) {
+            if (locked) return;
+            locked = true;
+            const buttons = document.querySelectorAll('.opt-btn');
+
+            if (selected === correct) {
+                btn.classList.add('correct');
+                score++;
+                document.getElementById('count-correct').textContent = score;
+                revealWord();
+                setTimeout(() => { currentIdx++; renderQuestion(); }, 1000);
+            } else {
+                btn.classList.add('wrong');
+                wrongCount++;
+                document.getElementById('count-wrong').textContent = wrongCount;
+                buttons.forEach(b => { if (b.textContent === correct) b.classList.add('correct'); });
+                revealWord();
+                document.getElementById('footer-actions').innerHTML = `
+                    <button class="action-btn" style="width:100%; border-color:var(--accent-cyan); color:var(--accent-cyan);" onclick="nextQ()">Next Question →</button>
+                `;
+            }
+        }
+
+        function nextQ() { currentIdx++; renderQuestion(); }
+        function skip() { wrongCount++; document.getElementById('count-wrong').textContent = wrongCount; nextQ(); }
+
+        function showAns() {
+            if (locked) return;
+            locked = true;
+            const q = questions[currentIdx];
+            document.querySelectorAll('.opt-btn').forEach(b => {
+                if (b.textContent === q.ans) b.classList.add('correct');
+            });
+            revealWord();
+            setTimeout(() => { currentIdx++; renderQuestion(); }, 2000);
+        }
+
+        function endQuiz() {
+            const total = questions.length;
+            document.getElementById('quiz-area').style.display = 'none';
+            document.getElementById('result-area').style.display = 'block';
+            document.getElementById('final-score').textContent = `Score: ${score} / ${total} (${Math.round(score/total*100)}%)`;
+        }
+
+        function backToSetup() {
+            document.getElementById('result-area').style.display = 'none';
+            document.getElementById('quiz-area').style.display = 'none';
+            document.getElementById('setup-screen').style.display = 'flex';
+            document.getElementById('stats-bar').style.display = 'none';
+            updatePoolCount();
+        }
+
+        function restartSame() {
+            currentIdx = 0;
+            score = 0;
+            wrongCount = 0;
+            shuffleArray(questions);
+            questions.forEach(q => {
+                q.options = generateOptions(q.ans, q.type, getAllWords());
+            });
+            document.getElementById('result-area').style.display = 'none';
+            document.getElementById('quiz-area').style.display = 'block';
+            document.getElementById('count-correct').textContent = '0';
+            document.getElementById('count-wrong').textContent = '0';
+            renderQuestion();
+        }
+
+        // ===== ADD WORDS MODAL =====
+        function openAddWords() {
+            document.getElementById('add-modal').classList.add('open');
+        }
+
+        function closeAddWords() {
+            document.getElementById('add-modal').classList.remove('open');
+            updatePoolCount();
+        }
+
+        function setAddType(type, btn) {
+            addType = type;
+            document.querySelectorAll('.type-toggle-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('artikel-select-group').style.display = type === 'artikel' ? 'flex' : 'none';
+        }
+
+        function addWord() {
+            const german = document.getElementById('add-german').value.trim();
+            const english = document.getElementById('add-english').value.trim();
+            const category = document.getElementById('add-category').value;
+
+            if (!german || !english) {
+                showToast('Please fill in both German and English fields');
+                return;
+            }
+
+            let newWord;
+            if (addType === 'vocab') {
+                newWord = {
+                    type: 'vocab',
+                    q: german,
+                    ans: english,
+                    options: [], // will be generated at quiz start
+                    grp: category
+                };
+            } else {
+                const artikel = document.getElementById('add-artikel').value;
+                // Strip artikel from german word if user included it
+                let cleanWord = german.replace(/^(der|die|das)\s+/i, '');
+                newWord = {
+                    type: 'artikel',
+                    q: cleanWord,
+                    ans: artikel,
+                    eng: english,
+                    options: ['der', 'die', 'das'],
+                    grp: category,
+                    full: `${artikel} ${cleanWord}`
+                };
+            }
+
+            userWords.push(newWord);
+            localStorage.setItem('germanQuizUserWords', JSON.stringify(userWords));
+
+            // Clear form
+            document.getElementById('add-german').value = '';
+            document.getElementById('add-english').value = '';
+
+            renderAddedList();
+            updatePoolCount();
+            showToast(`Added: ${german}`);
+        }
+
+        function removeWord(index) {
+            userWords.splice(index, 1);
+            localStorage.setItem('germanQuizUserWords', JSON.stringify(userWords));
+            renderAddedList();
+            updatePoolCount();
+        }
+
+        function renderAddedList() {
+            const container = document.getElementById('added-list');
+            const scroll = document.getElementById('added-scroll');
+            const countEl = document.getElementById('added-count');
+
+            if (userWords.length === 0) {
+                container.style.display = 'none';
+                return;
+            }
+
+            container.style.display = 'block';
+            countEl.textContent = userWords.length;
+
+            scroll.innerHTML = userWords.map((w, i) => `
+                <div class="added-item">
+                    <div class="word-info">
+                        <span class="de">${w.q}</span>
+                        <span class="en">→ ${w.ans}${w.eng ? ' (' + w.eng + ')' : ''}</span>
+                        <span class="tag">${w.type}</span>
+                    </div>
+                    <button class="remove-btn" onclick="removeWord(${i})" title="Remove">×</button>
+                </div>
+            `).reverse().join('');
+        }
+
+        // ===== UTILS =====
+        function shuffleArray(arr) {
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 2000);
+        }
+
+        // Keyboard shortcut: Enter to start
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Enter' && document.getElementById('setup-screen').style.display !== 'none') {
+                startQuiz();
+            }
+        });
+    </script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js');
+        }
+    </script>
+</body>
+</html>
