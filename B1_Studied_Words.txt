@@ -1,0 +1,1938 @@
+abbiegen	to turn	Verb
+die Abbildung	illustration/figure	Noun
+das Abenteuer	adventure	Noun
+der Abfall	waste/trash	Noun
+der Abfalleimer	trash can	Noun
+die Abgase	exhaust fumes	Noun (Pl.)
+abhängen	to depend on	Verb
+abhängig	dependent	Adjective/Adverb
+abheben	to withdraw (money)	Verb
+ablehnen	to reject/decline	Verb
+abmachen	to agree on/arrange	Verb
+abnehmen	to lose weight/decrease	Verb
+das Abo	subscription	Noun
+das Abonnement	subscription	Noun
+abonnieren	to subscribe	Verb
+absagen	to cancel	Verb
+der Abschied	farewell/goodbye	Noun
+der Abschluss	degree/completion	Noun
+der Abschnitt	section	Noun
+abschreiben	to copy/cheat	Verb
+die Absenderin	sender (f.)	Noun
+die Absicht	intention	Noun
+absolut	absolute(ly)	Adjective/Adverb
+abstimmen	to vote	Verb
+die Abteilung	department	Noun
+abwärts	downward	Adjective/Adverb
+der Abwart	caretaker	Noun
+die Abwartin	caretaker (f.)	Noun
+abwaschen	to wash dishes	Verb
+achten	to pay attention to	Verb
+ähnlich	similar	Adjective/Adverb
+die Änderung	change	Noun
+ängstlich	anxious	Adjective/Adverb
+der Ärger	anger	Noun
+ärgerlich	annoying	Adjective/Adverb
+die Ärztin	doctor (f.)	Noun
+äußerlich	external(ly)	Adjective/Adverb
+der Affe	monkey/ape	Noun
+der Akku	battery (rechargeable)	Noun
+der Akkumulator	accumulator/battery	Noun
+die Aktion	campaign	Noun
+die Aktivität	activity	Noun
+akzeptieren	to accept	Verb
+der Alarm	alarm	Noun
+der Alkohol	alcohol	Noun
+allerdings	however	Adjective/Adverb
+allgemein	general	Adjective/Adverb
+die Allgemeinbildende	general education	Noun
+alltägliche	everyday	Adjective/Adverb
+der Alltag	everyday life	Noun
+das Alphabet	alphabet	Noun
+das Altenheim	retirement home	Noun
+die Alternative	alternative	Noun
+das Altersheim	retirement home	Noun
+die Ammännin	mayor (f., Swiss)	Noun
+der Ammann	mayor (Swiss)	Noun
+das Amt	office/authority	Noun
+amüsieren	to amuse/enjoy	Verb
+analysieren	to analyze	Verb
+der Anbieter	provider	Noun
+anderen	other	Adjective/Adverb
+andererseits	on the other hand	Adjective/Adverb
+anerkennen	to acknowledge	Verb
+anfangs	initially	Adjective/Adverb
+die Angabe	detail	Noun
+angeben	to state/show off	Verb
+der Angehörige	relative/family member	Noun
+die Angehörige	relative (f.)	Noun
+angenehm	pleasant	Adjective/Adverb
+der Angestellte	employee (m.)	Noun
+die Angestellte	employee (f.)	Noun
+anhaben	to wear	Verb
+ankündigen	to announce	Verb
+die Anlage	facility	Noun
+die Anleitung	instruction/guide	Noun
+der Anleitung	instruction	Noun
+annehmen	to accept/assume	Verb
+die Annonce	advertisement	Noun
+anschaffen	to buy/acquire	Verb
+anschließen	to connect	Verb
+anschnallen	to fasten seatbelt	Verb
+ansprechen	to address	Verb
+der Anspruch	claim/entitlement	Noun
+das Anspruchsniveau	level of difficulty	Noun
+anstellen	to employ	Verb
+anstrengen	to make an effort	Verb
+anstrengend	exhausting	Adjective/Adverb
+der Antrag	application	Noun
+die Anwältin	lawyer (f.)	Noun
+der Anwalt	lawyer	Noun
+der Anweisungen	instructions	Noun
+anwenden	to apply/use	Verb
+anwesend	present/attending	Adjective/Adverb
+die Anzahl	number/quantity	Noun
+anzeigen	to report/display	Verb
+die Aprikose	apricot	Noun
+der Arbeiter	worker	Noun
+die Arbeiterin	worker (f.)	Noun
+der Arbeitnehmer	employee	Noun
+die Arbeitserlaubnis	work permit	Noun
+die Arbeitslosigkeit	unemployment	Noun
+die Arbeitsstelle	job/workplace	Noun
+der Architekt	architect	Noun
+die Architektin	architect (f.)	Noun
+die Art	type/kind	Noun
+das Asyl	asylum	Noun
+der Atem	breath	Noun
+atmen	to breathe	Verb
+der Aufenthalt	stay/residence	Noun
+auffallen	to stand out/notice	Verb
+auffordern	to request/demand	Verb
+die Aufforderung	request/demand	Noun
+aufführen	to perform/list	Verb
+aufgeben	to give up	Verb
+aufgefallen	noticed	Verb
+aufhalten	to hold up/delay	Verb
+aufheben	to pick up/keep	Verb
+aufladen	to charge/load	Verb
+auflösen	to dissolve/resolve	Verb
+die Aufnahme	recording/admission	Noun
+aufnehmen	to record/take in	Verb
+aufregen	to upset/excite	Verb
+aufs	onto the	Adjective/Adverb
+aufschreiben	to write down	Adjective/Adverb
+der Auftrag	order/assignment	Noun
+auftreten	to appear/perform	Verb
+der Auftritt	appearance/performance	Noun
+aufwachen	to wake up	Verb
+aufwärts	upward	Adjective/Adverb
+der Augenblick	moment	Noun
+der Ausdruck	expression	Noun
+ausdrucken	to print out	Verb
+die Ausfahrt	exit (highway)	Noun
+ausfallen	to be canceled/fail	Verb
+die Ausgabe	edition/expense	Noun
+die Aushilfe	temporary worker	Noun
+die Ausländerin	foreigner (f.)	Noun
+die Ausnahme	exception	Noun
+ausreichen	to be enough/sufficient	Verb
+ausreichend	sufficient	Adjective/Adverb
+ausrichten	to pass on a message	Verb
+die Aussagen	statements	Noun
+ausschließen	to exclude	Verb
+ausschließlich	exclusively	Adjective/Adverb
+außen	outside	Adjective/Adverb
+die Aussicht	view/prospect	Noun
+die Aussprache	pronunciation	Noun
+ausstellen	to exhibit/issue	Verb
+auswählen	to select/choose	Verb
+die Auswahl	selection/choice	Noun
+die Auszubildende	trainee (f.)	Noun
+der Autor	author	Noun
+die Autorin	author (f.)	Noun
+der Azubi	trainee/apprentice	Noun
+die Babysitterin	babysitter (f.)	Noun
+die Badewanne	bathtub	Noun
+der Bär	bear	Noun
+die Bahnhofstraße	station street	Noun
+das Ballett	ballet	Noun
+die Bankleitzahl	bank code	Noun
+die Bankomat-Karte	debit card (Austrian)	Noun
+bares	cash	Adjective/Adverb
+das Bargeld	cash	Noun
+der Bart	beard	Noun
+die Batterie	battery	Noun
+der Bauer	farmer	Noun
+der Bauernhof	farm	Noun
+beachten	to pay attention to	Verb
+die Beamtin	civil servant (f.)	Noun
+beantragen	to apply for	Verb
+bearbeiten	to process/edit	Verb
+der Bedarf	demand/need	Noun
+die Bedeutung	meaning/importance	Noun
+bedienen	to serve/operate	Verb
+die Bedingung	condition	Noun
+beeinflussen	to influence	Verb
+befinden	to be located	Verb
+befreit	freed/exempt	Adjective/Adverb
+befriedigend	satisfactory	Adjective/Adverb
+begegnen	to meet/encounter	Verb
+begeistert	enthusiastic	Adjective/Adverb
+der Beginn	beginning/start	Noun
+begleiten	to accompany	Verb
+begrenzt	limited	Adjective/Adverb
+der Begriffe	terms/concepts	Noun
+die Begründung	reasoning/justification	Noun
+begrüßen	to greet/welcome	Verb
+behalten	to keep	Verb
+behandeln	to treat/handle	Verb
+behaupten	to claim/assert	Verb
+behindern	to hinder/obstruct	Verb
+die Behörde	authority/agency	Noun
+beiden	both	Adjective/Adverb
+beim	at the	Adjective/Adverb
+beinahe	almost/nearly	Adjective/Adverb
+beißen	to bite	Verb
+der Beitrag	contribution	Noun
+der Bekannte	acquaintance (m.)	Noun
+die Bekannte	acquaintance (f.)	Noun
+der Beleg	receipt/proof	Noun
+beleidigen	to insult	Verb
+bemerken	to notice/remark	Verb
+bemühen	to make an effort	Verb
+benötigen	to need/require	Verb
+das Benzin	gasoline/petrol	Noun
+beobachten	to observe/watch	Verb
+bequeme	comfortable	Adjective/Adverb
+die Beratung	advice/consultation	Noun
+berechnen	to calculate/charge	Verb
+der Bereich	area/field	Noun
+bereit	ready	Adjective/Adverb
+bereits	already	Adjective/Adverb
+der Bericht	report	Noun
+die Berufsbildende	vocational education	Noun
+die Berufsmittelschule	vocational school (Swiss)	Noun
+die Berufsschule	vocational school	Noun
+beruhigen	to calm down	Verb
+beschädigen	to damage	Verb
+beschäftigen	to employ/keep busy	Verb
+die Beschäftigung	occupation/activity	Noun
+beschließen	to decide	Verb
+beschlossen	decided	Verb
+die Beschreibung	description	Noun
+besetzen	to occupy	Verb
+besitzen	to own/possess	Verb
+besorgen	to get/obtain	Verb
+besprechen	to discuss	Verb
+die Besprechung	meeting/discussion	Noun
+die Besserung	improvement/recovery	Noun
+die Bestätigung	confirmation	Noun
+besten	best	Verb
+bestimmt	certain(ly)/definitely	Adjective/Adverb
+bestrafen	to punish	Verb
+beteiligen	to participate/involve	Verb
+der Betrag	amount	Noun
+betreuen	to look after/care for	Verb
+der Betreuer	caretaker/supervisor	Noun
+die Betreuerin	caretaker (f.)	Noun
+die Betreuung	care/supervision	Noun
+der Betrieb	company/operation	Noun
+die Betriebsrätin	works council member (f.)	Noun
+der Betriebsrat	works council	Noun
+betrügen	to cheat/deceive	Verb
+bewegen	to move	Verb
+die Bewegung	movement/exercise	Noun
+der Beweis	proof/evidence	Noun
+beweisen	to prove	Verb
+der Bewohner	resident	Noun
+die Bewohnerin	resident (f.)	Noun
+die Beziehung	relationship	Noun
+die Biene	bee	Noun
+bieten	to offer	Verb
+der Bikini	bikini	Noun
+der Bildschirm	screen/monitor	Noun
+das Billett	ticket (Swiss)	Noun
+bisher	until now/so far	Adjective/Adverb
+das Blatt	leaf/sheet	Noun
+blind	blind	Adjective/Adverb
+der Blitz	lightning/flash	Noun
+blitzen	to flash (lightning)	Verb
+blühen	to bloom	Verb
+das Blut	blood	Noun
+bluten	to bleed	Verb
+der Boden	floor/ground/soil	Noun
+das Boot	boat	Noun
+die Botschaft	embassy/message	Noun
+brechen	to break	Verb
+die Breite	width	Noun
+die Bremse	brake	Noun
+bremsen	to brake	Verb
+brennen	to burn	Verb
+der Briefkasten	mailbox	Noun
+die Brieftasche	wallet	Noun
+der Briefumschlag	envelope	Noun
+das Brötli	bread roll (Swiss)	Noun
+die Broschüre	brochure	Noun
+die Brust	chest/breast	Noun
+der Bub	boy (Austrian/Swiss)	Noun
+die Buchhandlung	bookshop	Noun
+die Büchse	can/tin	Noun
+die Bühne	stage	Noun
+der Bürger	citizen	Noun
+die Bürgerin	citizen (f.)	Noun
+der Bürgermeister	mayor	Noun
+die Bürgermeisterin	mayor (f.)	Noun
+die Bürste	brush	Noun
+das Buffet	buffet	Noun
+der Bund	federation	Noun
+der Bundeskanzler	chancellor	Noun
+die Bundeskanzlerin	chancellor (f.)	Noun
+das Bundesland	federal state	Noun
+der Bundespräsident	president	Noun
+die Bundespräsidentin	president (f.)	Noun
+die Bundesrätin	council member (f.)	Noun
+der Bundesrat	federal council	Noun
+der Bundestag	parliament (German)	Noun
+die Burg	castle/fortress	Noun
+das Camp	camp	Noun
+die Castingshow	casting show	Noun
+die Chance	chance/opportunity	Noun
+der Chat	chat	Noun
+chen	diminutive suffix	Adjective/Adverb
+der Chip	chip	Noun
+die Chipkarte	chip card	Noun
+die City	city center	Noun
+der Club	club	Noun
+der Coiffeur	hairdresser (Swiss m.)	Noun
+die Coiffeuse	hairdresser (Swiss f.)	Noun
+das Cola	cola	Noun
+die Couch	couch	Noun
+der Cousin	cousin (m.)	Noun
+die Cousine	cousin (f.)	Noun
+das Couvert	envelope (Swiss)	Noun
+das Dach	roof	Noun
+dafür	for that/in favor of	Adjective/Adverb
+dagegen	against that/on the other hand	Verb
+damit	so that/with that	Adjective/Adverb
+danach	after that	Adjective/Adverb
+dankbar	grateful/thankful	Adjective/Adverb
+darstellen	to present/depict	Verb
+die Darstellung	presentation/depiction	Noun
+die Daten	data	Noun
+die Dauer	duration	Noun
+dauernd	constantly	Adjective/Adverb
+die Decke	ceiling/blanket	Noun
+deiner	yours	Adjective/Adverb
+dekorieren	to decorate	Verb
+die Demokratie	democracy	Noun
+das Denkmal	monument/memorial	Noun
+das Dessert	dessert	Noun
+das Detail	detail	Noun
+der Deutsche	German (m.)	Noun
+die Deutsche	German (f.)	Noun
+die Deutschlernende	German learner	Noun
+der Deutschprüfung	German exam	Noun
+die Diät	diet	Noun
+der Dialekt	dialect	Noun
+der Dialog	dialogue	Noun
+dicht	dense/thick/tight	Adjective/Adverb
+der Dieb	thief	Noun
+dienen	to serve	Verb
+der Dienst	service/duty	Noun
+diesem	this	Adjective/Adverb
+diesen	this/these	Adjective/Adverb
+dieser	this	Adjective/Adverb
+dieses	this	Adjective/Adverb
+diesmal	this time	Adjective/Adverb
+digital	digital	Adjective/Adverb
+das Diplom	diploma	Noun
+die Diplommittelschule	diploma school (Swiss)	Noun
+die Direktorin	director (f.)	Noun
+die Diskothek	nightclub/disco	Noun
+die Diskussion	discussion	Noun
+die Distanz	distance	Noun
+die Doktorin	doctor (f., title)	Noun
+das Dokument	document	Noun
+der Donner	thunder	Noun
+donnern	to thunder	Verb
+dorthin	to there	Adjective/Adverb
+die Dose	can/tin	Noun
+der Dreck	dirt/filth	Noun
+drehen	to turn/rotate	Verb
+die Droge	drug	Noun
+die Drogerie	drugstore	Noun
+der Druck	pressure/print	Noun
+der Durchschnitt	average	Noun
+durchschnittlich	average/on average	Adjective/Adverb
+duzen	to use informal 'du'	Verb
+das Eck	corner	Noun
+eckig	angular/square	Adjective/Adverb
+die Ehe	marriage	Noun
+die Ehefrau	wife	Noun
+das Ehepaar	married couple	Noun
+eher	rather/sooner	Adjective/Adverb
+ehrlich	honest	Adjective/Adverb
+eignen	to be suitable	Verb
+die Eile	hurry/rush	Noun
+eilen	to hurry	Verb
+die Einbahnstraße	one-way street	Noun
+einbrechen	to break in	Verb
+der Einbrecher	burglar	Noun
+die Einbrecherin	burglar (f.)	Noun
+der Einbruch	break-in	Noun
+eindeutig	clear/obvious	Adjective/Adverb
+der Eindruck	impression	Noun
+einen	a/one	Adjective/Adverb
+einer	one/a	Adjective/Adverb
+die Einfahrt	entrance/driveway	Noun
+der Einfall	idea	Noun
+einfallen	to come to mind	Verb
+der Einfluss	influence	Noun
+einfügen	to insert	Verb
+einführen	to introduce/import	Verb
+die Einführung	introduction	Noun
+eingefallen	occurred to	Verb
+einheitlich	uniform/consistent	Adjective/Adverb
+einheitliche	uniform	Adjective/Adverb
+einigen	to agree	Verb
+der Einkauf	purchase/shopping	Noun
+das Einkommen	income	Noun
+die Einleitung	introduction	Noun
+die Einnahme	income/intake	Noun
+einnehmen	to take (medicine)	Verb
+einrichten	to furnish/set up	Verb
+die Einrichtung	furnishing/institution	Noun
+einsam	lonely	Adjective/Adverb
+einschalten	to turn on/switch on	Verb
+das Einschreiben	registered mail	Noun
+einsetzen	to use/deploy	Verb
+einstellen	to hire/adjust	Verb
+der Einträge	entries	Noun
+der Eintrag	entry	Noun
+eintreten	to enter/occur	Verb
+die Einübung	practice/rehearsal	Noun
+einverstanden	agreed/in agreement	Verb
+der Einwohner	inhabitant/resident	Noun
+die Einwohnerin	inhabitant (f.)	Noun
+einzahlen	to deposit	Verb
+die Einzahlung	deposit	Noun
+die Einzelheit	detail	Noun
+einzeln	individual(ly)	Adjective/Adverb
+die Eisenbahn	railway	Noun
+der Elefant	elephant	Noun
+elegant	elegant	Adjective/Adverb
+elektrisch	electric	Adjective/Adverb
+elektrische	electric	Adjective/Adverb
+elektronisch	electronic	Adjective/Adverb
+der Empfang	reception	Noun
+empfangen	to receive	Verb
+die Empfehlung	recommendation	Noun
+die Energie	energy	Noun
+der Enkel	grandson	Noun
+die Enkelin	granddaughter	Noun
+entdecken	to discover	Verb
+die Ente	duck	Noun
+entfernen	to remove	Verb
+die Entfernung	distance	Noun
+enthalten	to contain	Verb
+entlassen	to dismiss/fire	Verb
+die Entlassung	dismissal	Noun
+entscheiden	to decide	Verb
+die Entscheidung	decision	Noun
+entschließen	to decide	Verb
+entschlossen	determined	Verb
+entsorgen	to dispose of	Verb
+entspannend	relaxing	Adjective/Adverb
+entstehen	to arise/develop	Verb
+enttäuschen	to disappoint	Verb
+die Enttäuschung	disappointment	Noun
+entwickeln	to develop	Verb
+die Entwicklung	development	Noun
+der Erdapfel	potato (Austrian)	Noun
+die Erde	earth/ground	Noun
+das Erdgeschoß	ground floor (Austrian)	Noun
+das Ereignis	event	Noun
+erfahren	to find out/experience	Verb
+erfinden	to invent	Verb
+die Erfindung	invention	Noun
+der Erfolg	success	Noun
+erfordern	to require	Verb
+erfüllen	to fulfill	Verb
+ergänzen	to complete/add	Verb
+erhalten	to receive/maintain	Verb
+erhöhen	to increase/raise	Verb
+die Erhöhung	increase	Noun
+erholen	to recover	Verb
+die Erholung	recovery/relaxation	Noun
+die Erinnerung	memory/reminder	Noun
+erkälten	to catch a cold	Verb
+die Erkältung	cold (illness)	Noun
+erkennen	to recognize	Verb
+die Erklärung	explanation	Noun
+erkundigen	to inquire	Verb
+erleben	to experience	Verb
+das Erlebnis	experience/event	Noun
+erledigen	to take care of/finish	Verb
+erleichtern	to make easier/relieve	Verb
+ernähren	to feed/nourish	Verb
+die Ernährung	nutrition/diet	Noun
+die Ernte	harvest	Noun
+eröffnen	to open (business)	Verb
+die Eröffnung	opening	Noun
+der Ersatz	replacement/substitute	Noun
+erschrecken	to frighten/be shocked	Verb
+ersetzen	to replace	Verb
+erstellen	to create/produce	Verb
+erwachsen	adult/grown-up	Adjective/Adverb
+die Erwachsenenprüfung	adult exam	Noun
+erwarten	to expect	Verb
+die Erzählung	story/narrative	Noun
+erziehen	to raise/educate	Verb
+die Erziehung	upbringing/education	Noun
+der Essig	vinegar	Noun
+die Etage	floor/story	Noun
+der Europäer	European (m.)	Noun
+die Europäerin	European (f.)	Noun
+die Europäische	European	Noun
+das Europäische	European	Noun
+der Experte	expert	Noun
+der Export	export	Noun
+extra	extra/separately	Adjective/Adverb
+die Fabrik	factory	Noun
+die Fachfrau	specialist (f.)	Noun
+die Fachleute	experts/specialists	Noun (Pl.)
+der Fachmann	specialist	Noun
+die Fähigkeit	ability/skill	Noun
+die Fähre	ferry	Noun
+fällig	due	Adjective/Adverb
+die Fahrbahn	road/lane	Noun
+das Fahrzeug	vehicle	Noun
+fair	fair	Adjective/Adverb
+der Faktor	factor	Noun
+der Fall	case/fall	Noun
+falls	in case/if	Adjective/Adverb
+fangen	to catch	Verb
+die Fantasie/Phantasie	imagination	Noun
+der Fasching	carnival	Noun
+fassen	to grasp/hold	Verb
+faulenzen	to laze around	Verb
+der Fauteuil	armchair (Austrian/Swiss)	Noun
+der Feber	February (Austrian)	Noun
+der Feierabend	end of work/evening	Noun
+der Feiertag	holiday	Noun
+das Feld	field	Noun
+die Fernbedienung	remote control	Noun
+festhalten	to hold on to	Verb
+festlegen	to determine/set	Verb
+die Festplatte	hard drive	Noun
+festsetzen	to set/determine	Verb
+feststehen	to be certain	Verb
+feststellen	to find out/determine	Verb
+die Feuerwehr	fire department	Noun
+das Feuerzeug	lighter	Noun
+die Figur	figure/shape	Noun
+finanzieren	to finance	Verb
+der Finger	finger	Noun
+die Fitness	fitness	Noun
+die Fläche	area/surface	Noun
+der Fleck	stain/spot	Noun
+der Fleischhauer	butcher (Austrian)	Noun
+die Fleischhauerin	butcher (f., Austrian)	Noun
+flexibel	flexible	Adjective/Adverb
+die Fliege	fly/bow tie	Noun
+fliehen	to flee	Verb
+fließen	to flow	Verb
+fließend	fluent(ly)	Adjective/Adverb
+die Flöte	flute	Noun
+die Flucht	escape/flight	Noun
+die Flüssigkeit	liquid	Noun
+der Flur	hallway	Noun
+fördern	to support/promote	Verb
+die Förderung	support/funding	Noun
+die Folge	consequence/episode	Noun
+folgen	to follow	Verb
+folgend	following	Adjective/Adverb
+die Folie	foil/slide	Noun
+fordern	to demand	Verb
+die Forderung	demand	Noun
+die Form	form/shape	Noun
+die Forschung	research	Noun
+die Fortbildung	continuing education	Noun
+der Fortschritt	progress	Noun
+fortsetzen	to continue	Verb
+die Fortsetzung	continuation	Noun
+der Fotograf	photographer	Noun
+die Fotografie	photography	Noun
+die Freiheit	freedom	Noun
+fremden	foreign/strange	Adjective/Adverb
+die Fremdsprache	foreign language	Noun
+fressen	to eat (animals)	Verb
+die Freude	joy/pleasure	Noun
+die Freundschaft	friendship	Noun
+frieren	to freeze/be cold	Verb
+der Friseur	hairdresser	Noun
+die Friseurin	hairdresser (f.)	Noun
+die Frist	deadline	Noun
+die Frisur	hairstyle	Noun
+fröhlich	cheerful/merry	Adjective/Adverb
+die Frucht	fruit	Noun
+das Frühjahr	spring	Noun
+der Frühling	spring	Noun
+führen	to lead/guide	Verb
+der Führerausweis	driver's license (Swiss)	Noun
+(sich) fürchten	to be afraid	Verb
+füttern	to feed	Verb
+das Fundbüro	lost and found	Noun
+funktionieren	to work/function	Verb
+der Fußgänger	pedestrian	Noun
+die Fußgängerin	pedestrian (f.)	Noun
+die Fußgängerzone	pedestrian zone	Noun
+die Galerie	gallery	Noun
+der Gang	corridor/course (meal)	Noun
+gar	at all/cooked	Adjective/Adverb
+die Garantie	guarantee/warranty	Noun
+garantieren	to guarantee	Verb
+die Garderobe	wardrobe/cloakroom	Noun
+das Gas	gas	Noun
+das Gasthaus	guesthouse/inn	Noun
+die Gaststätte	restaurant/pub	Noun
+gebadet	bathed	Adjective/Adverb
+das Gebäck	pastries	Noun
+das Gebäude	building	Noun
+das Gebiet	area/territory	Noun
+das Gebirge	mountain range	Noun
+gebrauchen	to use	Verb
+die Gebühr	fee/charge	Noun
+die Geburt	birth	Noun
+der Gedanke	thought	Noun
+das Gedicht	poem	Noun
+die Geduld	patience	Noun
+geehrt	honored	Adjective/Adverb
+geeignet	suitable	Adjective/Adverb
+das Gefängnis	prison	Noun
+die Gefahr	danger	Noun
+das Gefühl	feeling	Noun
+die Gegend	area/region	Noun
+der Gegensatz	contrast/opposite	Noun
+der Gegenstand	object/item	Noun
+der Gegner	opponent	Noun
+geheim	secret	Adjective/Adverb
+das Geheimnis	secret	Noun
+geholfen	helped	Verb
+der Geldautomat	ATM	Noun
+die Gelegenheit	opportunity	Noun
+gelernt	learned	Adjective/Adverb
+gelesen	read (past)	Verb
+gelingen	to succeed	Verb
+gelten	to be valid/apply	Verb
+gelungen	succeeded/successful	Verb
+die Gemeinde	community/municipality	Noun
+gemeinsam	together/shared	Adjective/Adverb
+die Gemeinschaft	community	Noun
+gemütlich	cozy/comfortable	Adjective/Adverb
+gemütliches	cozy	Adjective/Adverb
+genäht	sewn	Adjective/Adverb
+genauso	just as/equally	Adjective/Adverb
+genehmigen	to approve	Verb
+die Generation	generation	Noun
+genießen	to enjoy	Verb
+genügen	to be enough	Verb
+geprüft	tested/checked	Adjective/Adverb
+gerecht	fair/just	Adjective/Adverb
+gerufen	called	Verb
+geschehen	to happen	Verb
+das Geschlecht	gender/sex	Noun
+der Geschmack	taste	Noun
+die Geschwindigkeit	speed	Noun
+die Gesellschaft	society/company	Noun
+das Gesetz	law	Noun
+gespannt	excited/curious	Adjective/Adverb
+gesprochen	spoken	Verb
+die Gewalt	violence/power	Noun
+die Gewerkschaft	trade union	Noun
+der Gewinn	profit/win	Noun
+das Gewissen	conscience	Noun
+gewöhnen	to get used to	Verb
+gewöhnlich	usual(ly)	Adjective/Adverb
+die Gewohnheit	habit	Noun
+gewohnt	used to/accustomed	Adjective/Adverb
+das Gewürz	spice	Noun
+gießen	to pour/water	Verb
+das Gift	poison	Noun
+die Giraffe	giraffe	Noun
+das Girokonto	checking account	Noun
+die Gläser	glasses	Noun
+glatt	smooth/slippery	Adjective/Adverb
+das Gold	gold	Noun
+das Golfspiel	golf game	Noun
+der Gott	God/god	Noun
+die Grafik	graphic/chart	Noun
+das Gras	grass	Noun
+gratis	free (no cost)	Adjective/Adverb
+die Gratulation	congratulation	Noun
+greifen	to grab/reach	Verb
+die Grenze	border/limit	Noun
+der Grieche	Greek (m.)	Noun
+die Griechin	Greek (f.)	Noun
+der Grill	grill/barbecue	Noun
+grillieren	to grill (Swiss)	Verb
+große	big/large	Adjective/Adverb
+großes	big/large	Adjective/Adverb
+gründen	to found/establish	Verb
+grüßen	to greet	Verb
+der Grund	reason/ground	Noun
+die Grundschule	elementary school	Noun
+das Grundstück	plot of land/property	Noun
+gucken	to look/peek	Verb
+günstige	cheap/affordable	Adjective/Adverb
+günstiges	cheap	Adjective/Adverb
+das Gymnasium	grammar school	Noun
+die Gymnastik	gymnastics	Noun
+die Hälfte	half	Noun
+der Händler	dealer/trader	Noun
+die Händlerin	dealer (f.)	Noun
+der Hafen	harbor/port	Noun
+hageln	to hail	Verb
+halb	half	Adjective/Adverb
+halben	half	Adjective/Adverb
+halbtags	part-time/half-day	Adjective/Adverb
+das Hallenbad	indoor pool	Noun
+der Halt	stop/hold	Noun
+halt	just/simply	Adjective/Adverb
+haltbar	durable/long-lasting	Adjective/Adverb
+der Hammer	hammer	Noun
+der Handel	trade/commerce	Noun
+handeln	to act/trade	Verb
+der Handwerker	craftsperson	Noun
+die Handwerkerin	craftsperson (f.)	Noun
+der Hase	rabbit/hare	Noun
+hassen	to hate	Verb
+hatten	had	Verb
+der Hauptbahnhof	main train station	Noun
+der Hausmeister	caretaker/janitor	Noun
+die Hausmeisterin	caretaker (f.)	Noun
+das Haustier	pet	Noun
+die Haut	skin	Noun
+heben	to lift	Verb
+heim	home	Adjective/Adverb
+das Heim	home/shelter	Noun
+heimlich	secret(ly)	Adjective/Adverb
+das Heimweh	homesickness	Noun
+heizen	to heat	Verb
+der Held	hero	Noun
+die Heldin	hero (f.)	Noun
+die Herausforderung	challenge	Noun
+der Herausgeber	publisher/editor	Noun
+die Herkunft	origin	Noun
+der Hersteller	manufacturer	Noun
+das Herz	heart	Noun
+hierher	here/to here	Adjective/Adverb
+das Hilfsmittel	tool/aid	Noun
+hinterher	afterwards	Adjective/Adverb
+hinterlassen	to leave behind	Adjective/Adverb
+der Hinweise	hints/notices	Noun
+hinweisen	to point out	Verb
+historisch	historical	Adjective/Adverb
+das Historischen	historical	Noun
+der Hit	hit (popular song)	Noun
+die Hitze	heat	Noun
+hochladen	to upload	Verb
+die Höhe	height	Noun
+der Hör	listening	Noun
+der Hörer	listener/receiver	Noun
+die Hörerin	listener (f.)	Noun
+der Hof	yard/court	Noun
+die Hoffnung	hope	Noun
+das Holz	wood	Noun
+der Honig	honey	Noun
+hübsch	pretty/nice	Adjective/Adverb
+der Hügel	hill	Noun
+die Hütte	cabin/hut	Noun
+der Humor	humor	Noun
+hungrig	hungry	Adjective/Adverb
+hupen	to honk	Verb
+der Hut	hat	Noun
+ideal	ideal	Adjective/Adverb
+illegal	illegal	Adjective/Adverb
+der Imbiss	snack/snack bar	Noun
+der Import	import	Noun
+indem	by (doing)	Adjective/Adverb
+individuell	individual(ly)	Adjective/Adverb
+die Industrie	industry	Noun
+die Infektion	infection	Noun
+informieren	to inform	Verb
+der Ingenieur	engineer	Noun
+der Inhalt	content	Noun
+inklusive	inclusive/including	Adjective/Adverb
+innen	inside	Adjective/Adverb
+das Insekt	insect	Noun
+das Inserat	advertisement	Noun
+insgesamt	in total/altogether	Adjective/Adverb
+installieren	to install	Verb
+das Institut	institute	Noun
+die Integration	integration	Noun
+integrieren	to integrate	Verb
+die Intelligenz	intelligence	Noun
+intensiv	intensive	Adjective/Adverb
+der Intensivkurs	intensive course	Noun
+der Inter	inter	Noun
+interessiert	interested	Adjective/Adverb
+interkulturell	intercultural	Adjective/Adverb
+interkulturelles	intercultural	Adjective/Adverb
+inzwischen	meanwhile	Adjective/Adverb
+irren	to be wrong	Verb
+der Jänner	January (Austrian)	Noun
+das Jahrhundert	century	Noun
+das Jahrtausend	millennium	Noun
+das Jahrzehnt	decade	Noun
+die Jause	snack (Austrian)	Noun
+der Jazz	jazz	Noun
+jeden	every/each	Adjective/Adverb
+jederzeit	anytime	Adjective/Adverb
+jedes	every/each	Adjective/Adverb
+jedoch	however	Adjective/Adverb
+jemals	ever	Adjective/Adverb
+jeweils	each time/respectively	Adjective/Adverb
+der Journalist	journalist	Noun
+die Journalistin	journalist (f.)	Noun
+die Jugend	youth	Noun
+die Jugendprüfung	youth exam	Noun
+das Kabel	cable	Noun
+die Kabine	cabin/booth	Noun
+die Kälte	cold (temperature)	Noun
+kämpfen	to fight	Verb
+der Käufer	buyer	Noun
+die Käuferin	buyer (f.)	Noun
+das Kaffeehaus	coffeehouse	Noun
+der Kakao	cocoa/hot chocolate	Noun
+kamen	came	Verb
+der Kampf	fight/struggle	Noun
+der Kanal	channel/canal	Noun
+der Kandidat	candidate	Noun
+die Kanne	pot/jug	Noun
+die Kantine	canteen	Noun
+der Kanton	canton (Swiss state)	Noun
+das Kapitel	chapter	Noun
+kaputtgehen	to break down	Adjective/Adverb
+kaputtmachen	to break/destroy	Adjective/Adverb
+die Karotte	carrot	Noun
+die Karriere	career	Noun
+die Kassette	cassette	Noun
+der Kasten	box/crate	Noun
+der Katalog	catalog	Noun
+die Katastrophe	catastrophe/disaster	Noun
+der Kauf	purchase	Noun
+kaum	hardly/barely	Adjective/Adverb
+keine	no/none	Adjective/Adverb
+der Kellner	waiter	Noun
+die Kellnerin	waitress	Noun
+das Kennzeichen	license plate/feature	Noun
+die Kerze	candle	Noun
+das Ketchup	ketchup	Noun
+das Kfz	motor vehicle	Noun
+der Killer	killer	Noun
+die Killerin	killer (f.)	Noun
+die Kinder	children	Noun
+die Kindertagesstätte	daycare center	Noun
+die Kindheit	childhood	Noun
+das Kissen	pillow/cushion	Noun
+die Kiste	box/crate	Noun
+klären	to clarify	Verb
+klagen	to complain/sue	Verb
+klare	clear	Adjective/Adverb
+die Klassenarbeit	class test	Noun
+kleben	to stick/glue	Verb
+kleinen	small	Adjective/Adverb
+klettern	to climb	Verb
+der Klick	click	Noun
+klicken	to click	Verb
+das Klima	climate	Noun
+die Klimaanlage	air conditioning	Noun
+die Klingel	doorbell	Noun
+klingeln	to ring (bell)	Verb
+klingen	to sound	Verb
+die Klinik	clinic/hospital	Noun
+klopfen	to knock	Verb
+der Kloß	dumpling	Noun
+knapp	scarce/just barely	Adjective/Adverb
+die Kneipe	pub/bar	Noun
+das Knie	knee	Noun
+der Knochen	bone	Noun
+der Knödel	dumpling (Austrian)	Noun
+der Knopf	button	Noun
+der Koch	cook/chef	Noun
+die Köchin	cook (f.)	Noun
+der König	king	Noun
+die Kollegin	colleague (f.)	Noun
+der Kommentar	comment	Noun
+die Kommunikation	communication	Noun
+komplett	complete	Adjective/Adverb
+kompliziert	complicated	Adjective/Adverb
+der Kompromiss	compromise	Noun
+die Konferenz	conference	Noun
+die Konfitüre	jam (Swiss)	Noun
+der Konflikt	conflict	Noun
+die Konkurrenz	competition	Noun
+das Konsulat	consulate	Noun
+der Konsum	consumption	Noun
+konsumieren	to consume	Verb
+die Kontrolle	control/check	Noun
+die Kopie	copy	Noun
+der Kopierer	copier	Noun
+der Korridor	corridor	Noun
+korrigieren	to correct	Verb
+das Kostüm	costume/suit	Noun
+kräftig	strong/powerful	Adjective/Adverb
+die Kraft	strength/power	Noun
+das Kraftfahrzeug	motor vehicle	Noun
+das Kraftwerk	power plant	Noun
+der Kranke	sick person (m.)	Noun
+die Kranke	sick person (f.)	Noun
+der Krankenpfleger	nurse (m.)	Noun
+die Krankenschwester	nurse	Noun
+der Krankenwagen	ambulance	Noun
+kreativ	creative	Adjective/Adverb
+die Kreditkarte	credit card	Noun
+der Kreis	circle/district	Noun
+das Kreuz	cross/back (body)	Noun
+der Krieg	war	Noun
+die Kriminalpolizei	criminal police	Noun
+die Krippe	daycare/crib	Noun
+die Krise	crisis	Noun
+die Kritik	criticism/review	Noun
+kritisieren	to criticize	Verb
+das Krokodil	crocodile	Noun
+die Kündigung	termination/notice	Noun
+der Künstler	artist	Noun
+die Künstlerin	artist (f.)	Noun
+künstlich	artificial	Adjective/Adverb
+kürzlich	recently	Adjective/Adverb
+küssen	to kiss	Verb
+die Küste	coast	Noun
+die Kuh	cow	Noun
+der Kuli	ballpoint pen	Noun
+die Kundin	customer (f.)	Noun
+der Kunststoff	plastic	Noun
+der Kursleiter	course instructor	Noun
+die Kursleiter	course instructor	Noun
+die Kurve	curve/bend	Noun
+der Kuss	kiss	Noun
+das Kuvert	envelope	Noun
+lächeln	to smile	Verb
+die Länge	length	Noun
+der Lärm	noise	Noun
+die Lage	situation/location	Noun
+das Lager	warehouse/camp	Noun
+landen	to land	Verb
+die Landung	landing	Noun
+die Landwirtschaft	agriculture	Noun
+die Langeweile	boredom	Noun
+langweilen	to bore	Verb
+der Last	load/burden	Noun
+der Laster	truck/vice	Noun
+das Laufwerk	drive (computer)	Noun
+die Laune	mood	Noun
+der Lautsprecher	loudspeaker	Noun
+der Lebenslauf	resume/CV	Noun
+lecker	delicious/tasty	Adjective/Adverb
+das Leder	leather	Noun
+die Lehre	apprenticeship/teaching	Noun
+die Lehrerin	teacher (f.)	Noun
+der Lehrling	apprentice	Noun
+die Lehrstelle	apprenticeship position	Noun
+leiden	to suffer	Verb
+leisten	to achieve/afford	Verb
+die Leistung	performance/achievement	Noun
+leiten	to lead/manage	Verb
+der Leiter	leader/manager	Noun
+die Leiter	ladder	Noun
+die Leiterin	leader (f.)	Noun
+die Leitung	management/pipe	Noun
+der Lerner	learner	Noun
+die Lernerin	learner (f.)	Noun
+der Leser	reader	Noun
+die Leserin	reader (f.)	Noun
+letzter	last	Adjective/Adverb
+das Lexikon	encyclopedia/dictionary	Noun
+die Liebe	love	Noun
+die Lieferung	delivery	Noun
+der Lift	elevator/lift	Noun
+die Limonade	lemonade/soft drink	Noun
+die Linie	line	Noun
+die Lippe	lip	Noun
+die Liste	list	Noun
+die Literatur	literature	Noun
+loben	to praise	Verb
+das Loch	hole	Noun
+locker	loose/relaxed	Adjective/Adverb
+löschen	to delete/extinguish	Verb
+lösen	to solve/dissolve	Verb
+der Löwe	lion	Noun
+der Lohn	wage	Noun
+lohnen	to be worth it	Verb
+losfahren	to set off/depart	Verb
+die Luft	air	Noun
+das Märchen	fairy tale	Noun
+das Magazin	magazine	Noun
+die Mahlzeit	meal	Noun
+die Mahnung	reminder/warning	Noun
+der Maler	painter	Noun
+die Malerin	painter (f.)	Noun
+der Manager	manager	Noun
+die Managerin	manager (f.)	Noun
+der Mangel	lack/shortage	Noun
+die Mappe	folder/briefcase	Noun
+die Margarine	margarine	Noun
+die Marille	apricot (Austrian)	Noun
+die Marke	brand	Noun
+der Marken	brands	Noun
+die Marmelade	jam/marmalade	Noun
+das Material	material	Noun
+die Mauer	wall (exterior)	Noun
+die Maus	mouse	Noun
+der Mechaniker	mechanic	Noun
+die Mechanikerin	mechanic (f.)	Noun
+die Medien	media	Noun (Pl.)
+die Medizin	medicine	Noun
+das Mehl	flour	Noun
+die Mehrheit	majority	Noun
+die Mehrwertsteuer	sales tax/VAT	Noun
+meine	my/mine	Adjective/Adverb
+meinem	my	Adjective/Adverb
+meiner	my/mine	Adjective/Adverb
+meinetwegen	for my sake/fine by me	Adjective/Adverb
+der Meister	master/champion	Noun
+melden	to report/register	Verb
+die Meldung	report/notification	Noun
+men	men	Adjective/Adverb
+die Mensa	cafeteria (university)	Noun
+menschlich	human	Adjective/Adverb
+das Menü	menu/set meal	Noun
+merkwürdig	strange/odd	Adjective/Adverb
+messen	to measure	Verb
+das Metall	metal	Noun
+die Methode	method	Noun
+die Metropole	metropolis	Noun
+der Metzger	butcher	Noun
+der Mieter	tenant	Noun
+die Mieterin	tenant (f.)	Noun
+der Migrant	migrant	Noun
+die Migrantin	migrant (f.)	Noun
+die Migration	migration	Noun
+die Minderheit	minority	Noun
+der Minister	minister	Noun
+die Ministerin	minister (f.)	Noun
+mischen	to mix	Verb
+die Mitarbeiterin	colleague (f.)	Noun
+miteinander	with each other	Adjective/Adverb
+das Mitglied	member	Noun
+der Mitschüler	classmate	Noun
+mitteilen	to inform/notify	Verb
+die Mittelschule	middle school	Noun
+mittlerweile	meanwhile/by now	Adjective/Adverb
+die Mobilbox	voicemail	Noun
+die Mobilität	mobility	Noun
+das Modell	model	Noun
+der Moderator	host/presenter	Noun
+die Moderatorin	host (f.)	Noun
+das Modul	module	Noun
+möbliert	furnished	Adjective/Adverb
+die Möglichkeit	possibility	Noun
+die Möhre	carrot	Noun
+der Monat	month	Noun
+der Mond	moon	Noun
+der Monitor	monitor/screen	Noun
+das Motorrad	motorcycle	Noun
+das Mountainbike	mountain bike	Noun
+die Mücke	mosquito	Noun
+das Müesli/Müsli	muesli/granola	Noun
+die Mühe	effort/trouble	Noun
+die Müllabfuhr	garbage collection	Noun
+die Mülltonne	garbage can	Noun
+mündlich	oral(ly)	Adjective/Adverb
+die Münze	coin	Noun
+musikalisch	musical	Adjective/Adverb
+der Musiker	musician	Noun
+der Muskel	muscle	Noun
+der Mut	courage	Noun
+mutig	brave/courageous	Adjective/Adverb
+die Muttersprache	mother tongue	Noun
+der Nachbar	neighbor	Noun
+nachdenken	to think about/reflect	Verb
+die Nachfrage	demand	Noun
+die Nachhilfe	tutoring	Noun
+nachschlagen	to look up	Verb
+die Nachspeise	dessert	Noun
+der Nachteil	disadvantage	Noun
+der Nachwuchs	offspring/newcomers	Noun
+die Nadel	needle	Noun
+nähen	to sew	Verb
+nähern	to approach	Verb
+nämlich	namely/because	Adjective/Adverb
+der Nagel	nail	Noun
+das Nahrungsmittel	food product	Noun
+die Nase	nose	Noun
+der Nationalität	nationality	Noun
+der Nationalrat	national council	Noun
+der Nebel	fog	Noun
+nebenbei	on the side/incidentally	Adjective/Adverb
+der Neffe	nephew	Noun
+negativ	negative	Adjective/Adverb
+der Nerv	nerve	Noun
+das Netz	net/network	Noun
+das Netzwerk	network	Noun
+neugierig	curious	Adjective/Adverb
+die Neuigkeit	news/novelty	Noun
+neulich	recently	Adjective/Adverb
+die Nichte	niece	Noun
+der Nichtraucher	non-smoker	Noun
+die Nichtraucherin	non-smoker (f.)	Noun
+niedrig	low	Adjective/Adverb
+nirgendwo	nowhere	Adjective/Adverb
+der Niveaustufe	proficiency level	Noun
+nochmals	once again	Adjective/Adverb
+normalerweise	normally	Adjective/Adverb
+die Notaufnahme	emergency room	Noun
+der Notausgang	emergency exit	Noun
+der Notfall	emergency	Noun
+der Notruf	emergency call	Noun
+nützen	to be useful	Verb
+nutzen	to use/benefit	Verb
+der Ober	waiter (Austrian)	Noun
+das Obergeschoss	upper floor	Noun
+obwohl	although	Adjective/Adverb
+öffentlich	public	Adjective/Adverb
+öffentlichen	public	Adjective/Adverb
+die Öffentlichkeit	public/the public	Noun
+der Österreicher	Austrian (m.)	Noun
+die Österreicherin	Austrian (f.)	Noun
+offenbar	apparently	Adjective/Adverb
+offenem	open	Adjective/Adverb
+offiziell	official(ly)	Adjective/Adverb
+die Oper	opera	Noun
+die Operation	operation/surgery	Noun
+operieren	to operate	Verb
+das Opfer	victim/sacrifice	Noun
+das Orchester	orchestra	Noun
+ordentlich	tidy/proper	Adjective/Adverb
+die Ordination	doctor's office (Austrian)	Noun
+ordnen	to organize/sort	Verb
+der Ordner	folder/binder	Noun
+die Organisation	organization	Noun
+das Original	original	Noun
+original	original	Adjective/Adverb
+der Ozean	ocean	Noun
+die Pädagogische	pedagogical	Noun
+die Panne	breakdown/mishap	Noun
+der Paradeiser	tomato (Austrian)	Noun
+parkieren	to park (Swiss)	Verb
+das Parlament	parliament	Noun
+die Partei	political party	Noun
+der Partner	partner	Noun
+die Partnerin	partner (f.)	Noun
+der Passagier	passenger	Noun
+die Passagierin	passenger (f.)	Noun
+der Patient	patient (m.)	Noun
+die Patientin	patient (f.)	Noun
+pauschal	flat-rate/general	Adjective/Adverb
+das Pech	bad luck	Noun
+peinlich	embarrassing	Adjective/Adverb
+die Pension	pension/guesthouse	Noun
+der Pensionist	retiree (Austrian)	Noun
+per	by/via	Adjective/Adverb
+perfekt	perfect	Adjective/Adverb
+der Perron	platform (Swiss)	Noun
+persönlich	personal(ly)	Adjective/Adverb
+die Person	person	Noun
+das Personal	staff/personnel	Noun
+der Personal	staff	Noun
+die Personalien	personal details	Noun (Pl.)
+der Personenkraftwagen	passenger car	Noun
+die Pfanne	pan	Noun
+der Pfeffer	pepper	Noun
+das Pferd	horse	Noun
+pflanzen	to plant	Verb
+das Pflaster	bandage/pavement	Noun
+die Pflaume	plum	Noun
+pflegen	to care for/maintain	Verb
+der Pfleger	caretaker/nurse	Noun
+die Pflegerin	caretaker (f.)	Noun
+die Pflicht	duty/obligation	Noun
+die Phantasie/Fantasie	imagination	Noun
+das Picknick	picnic	Noun
+die Pille	pill	Noun
+der Pilz	mushroom/fungus	Noun
+der Pinguin	penguin	Noun
+der Pkw	car (abbreviation)	Noun
+das Plakat	poster	Noun
+die Planung	planning	Noun
+das Plastik	plastic	Noun
+die Plattform	platform	Noun
+der Pöstler	mail carrier (Swiss)	Noun
+die Politik	politics/policy	Noun
+der Politiker	politician	Noun
+die Politikerin	politician (f.)	Noun
+politisch	political	Adjective/Adverb
+der Polizist	police officer	Noun
+populär	popular	Adjective/Adverb
+die Portion	portion/serving	Noun
+positiv	positive	Adjective/Adverb
+das Poster	poster	Noun
+das Poulet	chicken (Swiss)	Noun
+die Präsentation	presentation	Noun
+präsentieren	to present	Adjective/Adverb
+der Praktikant	intern	Noun
+die Praktikantin	intern (f.)	Noun
+praktisch	practical(ly)	Adjective/Adverb
+die Presse	press (media)	Noun
+prima	great/excellent	Adjective/Adverb
+die Primarschule	primary school (Swiss)	Noun
+privat	private	Adjective/Adverb
+das Produkt	product	Noun
+die Produktion	production	Noun
+produzieren	to produce	Verb
+der Professor	professor	Noun
+die Professorin	professor (f.)	Noun
+der Profi	professional	Noun
+der Profisportler	professional athlete	Noun
+die Profisportlerin	professional athlete (f.)	Noun
+das Projekt	project	Noun
+der Protest	protest	Noun
+protestieren	to protest	Verb
+der Prozess	process/trial	Noun
+prüfen	to test/check	Verb
+der Publikation	publication	Noun
+das Publikum	audience/public	Noun
+der Pullover	sweater/pullover	Noun
+die Puppe	doll	Noun
+das Puzzle	puzzle	Noun
+die Qualifikation	qualification	Noun
+die Qualität	quality	Noun
+das Quartier	neighborhood (Swiss)	Noun
+die Quittung	receipt	Noun
+das Quiz	quiz	Noun
+der Rabatt	discount	Noun
+radeiser	tomato (Austrian)	Adjective/Adverb
+der Radfahrer	cyclist	Noun
+die Radfahrerin	cyclist (f.)	Noun
+das Radio	radio	Noun
+der Radio	radio	Noun
+das Rätsel	puzzle/riddle	Noun
+der Rand	edge/margin	Noun
+der Rasen	lawn	Noun
+(sich) rasieren	to shave	Verb
+der Rat	advice	Noun
+raten	to advise/guess	Verb
+das Rathaus	city hall	Noun
+der Raucher	smoker	Noun
+die Raucherin	smoker (f.)	Noun
+rausgefunden	found out	Verb
+reagieren	to react	Verb
+die Reaktion	reaction	Noun
+realisieren	to realize/implement	Verb
+realistisch	realistic	Adjective/Adverb
+die Realität	reality	Noun
+die Realschule	secondary school	Noun
+die Recherche	research	Noun
+rechnen	to calculate	Verb
+der Rechner	computer/calculator	Noun
+das Recht	right/law	Noun
+recht	right/quite	Adjective/Adverb
+rechtlich	legal	Adjective/Adverb
+die Rechtslage	legal situation	Noun
+die Rede	speech	Noun
+reden	to talk	Verb
+reduzieren	to reduce	Verb
+das Referat	presentation/report	Noun
+die Reform	reform	Noun
+die Regel	rule	Noun
+regelmäßig	regular(ly)	Adjective/Adverb
+regeln	to regulate/arrange	Verb
+die Regierung	government	Noun
+die Regierungsrätin	council member (f.)	Noun
+der Regierungsrat	government council	Noun
+reichen	to be enough/hand	Verb
+der Reifen	tire	Noun
+die Reihe	row/series	Noun
+die Reihenfolge	order/sequence	Noun
+rein	pure/clean/in	Adjective/Adverb
+reinigen	to clean	Verb
+reiten	to ride (horse)	Verb
+die Reklame	advertisement	Noun
+der Rekord	record	Noun
+relativ	relative(ly)	Adjective/Adverb
+die Relevanz	relevance	Noun
+rennen	to run	Verb
+die Rente	pension	Noun
+der Rentner	retiree	Noun
+die Rentnerin	retiree (f.)	Noun
+die Reportage	report/documentary	Noun
+der Reporter	reporter	Noun
+die Reporterin	reporter (f.)	Noun
+reservieren	to reserve	Verb
+die Reservierung	reservation	Noun
+der Respekt	respect	Noun
+der Rest	rest/remainder	Noun
+retten	to save/rescue	Verb
+das Rezept	recipe/prescription	Noun
+die Rezeption/Reception	reception	Noun
+der Richter	judge	Noun
+die Richterin	judge (f.)	Noun
+die Richtung	direction	Noun
+das Rind	cattle/beef	Noun
+der Ring	ring	Noun
+roh	raw	Adjective/Adverb
+die Rolle	role	Noun
+der Roman	novel	Noun
+die Rose	rose	Noun
+der Rucksack	backpack	Noun
+die Rückfahrt	return journey	Noun
+die Rückkehr	return	Noun
+die Rückmeldung	feedback	Noun
+die Rücksicht	consideration	Noun
+rückwärts	backwards	Adjective/Adverb
+das Rüebli	carrot (Swiss)	Noun
+rufen	to call/shout	Verb
+die Rufnummer	phone number	Noun
+rund	round/approximately	Adjective/Adverb
+die Runde	round	Noun
+die Rundfahrt	tour/sightseeing trip	Noun
+runterwerfen	to throw down	Verb
+der Sack	sack/bag	Noun
+der Sänger	singer	Noun
+die Sängerin	singer (f.)	Noun
+die Saison	season	Noun
+die Salbe	ointment	Noun
+der Salon	salon	Noun
+der Samstag	Saturday	Noun
+der Sand	sand	Noun
+der Sandwich	sandwich	Noun
+satt	full (not hungry)	Adjective/Adverb
+sauer	sour/angry	Adjective/Adverb
+die Schachtel	box	Noun
+schade	what a pity	Adjective/Adverb
+schaden	to harm	Verb
+der Schaden	damage	Noun
+schädlich	harmful	Adjective/Adverb
+schätzen	to estimate/appreciate	Verb
+das Schaf	sheep	Noun
+schalten	to switch/shift	Verb
+scharf	sharp/spicy	Adjective/Adverb
+der Schatten	shadow/shade	Noun
+das Schaufenster	shop window	Noun
+der Schauspieler	actor	Noun
+die Schauspielerin	actress	Noun
+die Scheibe	slice/disc/pane	Noun
+scheiden	to divorce/separate	Verb
+die Scheidung	divorce	Noun
+der Schein	note (money)/certificate	Noun
+die Schere	scissors	Noun
+schieben	to push	Verb
+schießen	to shoot	Verb
+das Schiff	ship	Noun
+die Schildkröte	turtle	Noun
+schimpfen	to scold/complain	Verb
+der Schlaf	sleep	Noun
+schlagen	to hit/beat	Verb
+die Schlange	snake/queue	Noun
+schlank	slim	Adjective/Adverb
+schließlich	finally/after all	Adjective/Adverb
+schlimm	bad/serious	Adjective/Adverb
+schmal	narrow	Adjective/Adverb
+das Schmerzmittel	painkiller	Noun
+schminken	to put on makeup	Verb
+der Schmuck	jewelry	Noun
+der Schmutz	dirt	Noun
+das Schnitzel	schnitzel	Noun
+der Schnupfen	runny nose/cold	Noun
+schönen	beautiful	Adjective/Adverb
+schrecklichen	terrible	Adjective/Adverb
+schreien	to scream/shout	Verb
+die Schrift	writing/font	Noun
+der Schriftsteller	writer/author	Noun
+die Schriftstellerin	writer (f.)	Noun
+der Schritt	step	Noun
+die Schülerin	student (f.)	Noun
+die Schüssel	bowl	Noun
+schütteln	to shake	Verb
+die Schularbeit	school test (Austrian)	Noun
+die Schulden	debts	Noun (Pl.)
+der Schutz	protection	Noun
+schwach	weak	Adjective/Adverb
+das Schwammerl	mushroom (Austrian)	Noun
+schwanger	pregnant	Adjective/Adverb
+die Schwangerschaft	pregnancy	Noun
+schweigen	to be silent	Verb
+das Schwein	pig	Noun
+der Schweizer	Swiss (m.)	Noun
+die Schweizerin	Swiss (f.)	Noun
+schwierig	difficult	Adjective/Adverb
+die Schwierigkeit	difficulty	Noun
+schwitzen	to sweat	Verb
+seitdem	since then	Adjective/Adverb
+der Sekretär	secretary	Noun
+die Sekretärin	secretary (f.)	Noun
+seltsam	strange/odd	Adjective/Adverb
+das Semester	semester	Noun
+das Seminar	seminar	Noun
+die Semmel	bread roll (Austrian)	Noun
+senden	to send/broadcast	Verb
+der Sender	TV/radio station	Noun
+die Senioren	seniors	Noun (Pl.)
+senkrecht	vertical	Adjective/Adverb
+die Serie	series	Noun
+der Service	service	Noun
+der Serviceangestellte	service employee	Noun
+die Serviceangestellte	service employee (f.)	Noun
+der Sessel	armchair	Noun
+(sich) setzen	to sit down	Verb
+die Show	show	Noun
+sicher	safe/certain(ly)	Adjective/Adverb
+die Sicherheit	safety/security	Noun
+sichern	to secure	Verb
+der Sieg	victory	Noun
+siegen	to win	Verb
+der Sieger	winner	Noun
+die Siegerin	winner (f.)	Noun
+(sich) siezen	to use formal 'Sie'	Verb
+singen	to sing	Verb
+sinken	to sink/decrease	Verb
+der Sinn	sense/meaning	Noun
+sinnlos	senseless/pointless	Adjective/Adverb
+die Situation	situation	Noun
+der Sitz	seat	Noun
+der Ski/Schi	ski	Noun
+das Smartphone	smartphone	Noun
+der Snack	snack	Noun
+die Socke	sock	Noun
+sodass	so that	Adjective/Adverb
+die Software	software	Noun
+sogar	even	Adjective/Adverb
+solange	as long as	Adjective/Adverb
+das Sonderangebot	special offer	Noun
+sondern	but (rather)	Adjective/Adverb
+der Song	song	Noun
+der Sonnabend	Saturday (northern German)	Noun
+sonnig	sunny	Adjective/Adverb
+die Sorge	worry/concern	Noun
+sorgen	to take care of/worry	Verb
+die Soße/Sauce	sauce	Noun
+das Souvenir	souvenir	Noun
+der Sozialarbeiter	social worker	Noun
+die Sozialarbeiterin	social worker (f.)	Noun
+sparen	to save (money)	Verb
+spazieren	to walk/stroll	Verb
+der Spaziergang	walk/stroll	Noun
+der Speisewagen	dining car	Noun
+der Spezialist	specialist	Noun
+die Spezialistin	specialist (f.)	Noun
+speziell	special/specific	Adjective/Adverb
+das Spiel	game	Noun
+der Spieler	player	Noun
+die Spielerin	player (f.)	Noun
+die Spielgruppe	playgroup	Noun
+der Spielplatz	playground	Noun
+das Spielzeug	toy	Noun
+spitz	pointed/sharp	Adjective/Adverb
+die Sportart	type of sport	Noun
+der Sportler	athlete	Noun
+die Sportlerin	athlete (f.)	Noun
+sportlich	sporty/athletic	Adjective/Adverb
+der Spot	commercial/spot	Noun
+der Sprachkenntnisse	language skills	Noun
+die Sprechstunde	office hours	Noun
+springen	to jump	Verb
+die Spritze	injection/syringe	Noun
+spülen	to wash dishes/flush	Verb
+spüren	to feel/sense	Verb
+die Spur	trace/lane	Noun
+der Staat	state/country	Noun
+der Stadtplan	city map	Noun
+der Stadtpräsident	mayor (Swiss)	Noun
+die Stadtpräsidentin	mayor (f., Swiss)	Noun
+städtisch	urban/municipal	Adjective/Adverb
+der Ständerat	council of states (Swiss)	Noun
+ständig	constant(ly)	Adjective/Adverb
+stammen	to come from/originate	Verb
+der Standpunkt	point of view	Noun
+der Star	star (celebrity)	Noun
+starkem	strong	Adjective/Adverb
+starker	strong	Adjective/Adverb
+der Start	start	Noun
+starten	to start	Verb
+die Station	station/stop	Noun
+die Statistik	statistics	Noun
+statistisch	statistical	Adjective/Adverb
+der Staub	dust	Noun
+staubsaugen	to vacuum	Verb
+das Steak	steak	Noun
+stechen	to sting/stab	Verb
+die Steckdose	power outlet	Noun
+der Stecker	plug	Noun
+stehlen	to steal	Verb
+steigen	to rise/climb	Verb
+der Stein	stone	Noun
+der Stempel	stamp/seal	Noun
+sterben	to die	Verb
+der Stern	star	Noun
+die Steuer	tax	Noun
+der Steward	steward	Noun
+die Stewardess	stewardess	Noun
+der Stiefel	boot	Noun
+die Stiege	staircase (Austrian)	Noun
+das Stiegenhaus	stairwell (Austrian)	Noun
+der Stift	pen/pencil	Noun
+der Stil	style	Noun
+die Stimme	voice/vote	Noun
+die Stimmung	mood/atmosphere	Noun
+stinken	to stink	Verb
+das Stockwerk	floor/story	Noun
+stören	to disturb	Verb
+die Störung	disturbance	Noun
+der Stoff	fabric/material	Noun
+stolz	proud	Adjective/Adverb
+stoppen	to stop	Verb
+(sich) stoßen	to bump/push	Verb
+strafbar	punishable	Adjective/Adverb
+die Strafe	punishment/fine	Noun
+der Strafzettel	parking ticket/fine	Noun
+die Strecke	route/distance	Noun
+der Strecke	route/distance	Noun
+das Streichholz	match (fire)	Noun
+der Streik	strike	Noun
+streiken	to strike	Verb
+der Stress	stress	Noun
+der Strom	electricity/current	Noun
+die Struktur	structure	Noun
+der Strumpf	stocking	Noun
+die Studentin	student (f.)	Noun
+die Studie	study	Noun
+der Studierende	student (m.)	Noun
+die Studierende	student (f.)	Noun
+das Studio	studio	Noun
+stürzen	to fall/rush	Verb
+die Stufe	step/level	Noun
+der Stufe	level/step	Noun
+der Sturm	storm	Noun
+die Sucht	addiction	Noun
+das Suchtmittel	addictive substance	Noun
+süchtig	addicted	Adjective/Adverb
+süß	sweet	Adjective/Adverb
+der Suffixen	suffixes	Noun
+die Summe	sum/total	Noun
+super	super/great	Adjective/Adverb
+der Supermarkt	supermarket	Noun
+der Swimmingpool	swimming pool	Noun
+das Symbol	symbol	Noun
+sympathisch	likable/nice	Adjective/Adverb
+das System	system	Noun
+die Szene	scene	Noun
+die Tabelle	table/chart	Noun
+der Täter	perpetrator	Noun
+die Täterin	perpetrator (f.)	Noun
+die Tätigkeit	activity/occupation	Noun
+täuscht	deceives	Adjective/Adverb
+der Tagesablauf	daily routine	Noun
+das Tal	valley	Noun
+das Talent	talent	Noun
+tanken	to fill up (gas)	Verb
+die Tankstelle	gas station	Noun
+der Tanz	dance	Noun
+das Taschengeld	pocket money	Noun
+das Taschentuch	tissue/handkerchief	Noun
+die Tasse	cup	Noun
+die Tastatur	keyboard	Noun
+die Taste	key/button	Noun
+die Tat	deed/act	Noun
+die Tatsache	fact	Noun
+tatsächlich	actual(ly)/indeed	Adjective/Adverb
+taub	deaf	Adjective/Adverb
+tauchen	to dive	Verb
+das Team	team	Noun
+die Technik	technology/technique	Noun
+technisch	technical	Adjective/Adverb
+die Technologie	technology	Noun
+teilen	to share/divide	Verb
+die Teilnahme	participation	Noun
+teilnehmen	to participate	Verb
+der Teilnehmer	participant	Noun
+die Teilnehmerin	participant (f.)	Noun
+die Teilzeit	part-time	Noun
+der Teller	plate	Noun
+die Temperatur	temperature	Noun
+das Tempo	speed/pace	Noun
+das Tennis	tennis	Noun
+der Teppich	carpet/rug	Noun
+der Terminal	terminal	Noun
+der Terminkalender	appointment calendar	Noun
+die Terrasse	terrace	Noun
+testen	to test	Verb
+der Textaufbau	text structure	Noun
+die Theorie	theory	Noun
+die Therapie	therapy	Noun
+tief	deep	Adjective/Adverb
+der Tierpark	zoo	Noun
+tippen	to type/tap	Verb
+der Titel	title	Noun
+der Tod	death	Noun
+tödlich	fatal/deadly	Adjective/Adverb
+tolerant	tolerant	Adjective/Adverb
+der Topf	pot	Noun
+das Tor	gate/goal	Noun
+die Torte	cake/tart	Noun
+total	total(ly)	Adjective/Adverb
+der Tote	dead person (m.)	Noun
+die Tote	dead person (f.)	Noun
+die Tour	tour	Noun
+der Tourismus	tourism	Noun
+der Tourist	tourist	Noun
+die Touristin	tourist (f.)	Noun
+die Tradition	tradition	Noun
+die Träne	tear (crying)	Noun
+träumen	to dream	Verb
+der Trainer	trainer/coach	Noun
+die Trainerin	trainer (f.)	Noun
+trainieren	to train	Verb
+das Training	training	Noun
+das Tram	tram/streetcar	Noun
+der Transport	transport	Noun
+transportieren	to transport	Verb
+der Treffpunkt	meeting point	Noun
+treiben	to drive/do (sport)	Verb
+der Trend	trend	Noun
+(sich) trennen	to separate	Verb
+die Trennung	separation	Noun
+das Treppenhaus	stairwell	Noun
+treten	to step/kick	Verb
+treu	faithful/loyal	Adjective/Adverb
+das Trinkgeld	tip (money)	Noun
+trocken	dry	Adjective/Adverb
+trockenes	dry	Adjective/Adverb
+trocknen	to dry	Verb
+die Tropfen	drops	Noun (Pl.)
+das Trottoir	sidewalk (Swiss)	Noun
+trotz	despite	Adjective/Adverb
+trotzdem	nevertheless/despite that	Adjective/Adverb
+das Tuch	cloth/scarf	Noun
+der Türke	Turkish person (m.)	Noun
+die Türkei	Turkey	Noun
+die Türkin	Turkish person (f.)	Noun
+die Tüte	bag	Noun
+der Turm	tower	Noun
+überall	everywhere	Adjective/Adverb
+überfahren	to run over	Verb
+überhaupt	at all/in general	Adjective/Adverb
+überholen	to overtake	Verb
+überlegen	to think about/consider	Verb
+übermorgen	day after tomorrow	Adjective/Adverb
+die Übernachtung	overnight stay	Noun
+übernehmen	to take over	Verb
+überprüfen	to check/verify	Verb
+überqueren	to cross	Verb
+überraschen	to surprise	Verb
+die Überraschung	surprise	Noun
+überreden	to persuade	Verb
+die Überschrift	heading/title	Noun
+übersetzen	to translate	Verb
+der Übersetzer	translator	Noun
+die Übersetzerin	translator (f.)	Noun
+die Übersetzung	translation	Noun
+die Überstunde	overtime	Noun
+übertreiben	to exaggerate	Verb
+die Überweisung	transfer (money)	Noun
+die Überzeugung	conviction	Noun
+üblich	usual/common	Adjective/Adverb
+übrig	remaining/left over	Adjective/Adverb
+das Ufer	shore/bank	Noun
+die Ukraine	Ukraine	Noun
+der Ukrainer	Ukrainian (m.)	Noun
+die Ukrainerin	Ukrainian (f.)	Noun
+umarmen	to hug	Verb
+(sich) umdrehen	to turn around	Verb
+die Umfrage	survey/poll	Noun
+die Umgebung	surroundings	Noun
+umgehen	to deal with	Verb
+die Umleitung	detour	Noun
+der Umtausch	exchange	Noun
+umtauschen	to exchange	Verb
+der Umzug	move/relocation	Noun
+unbedingt	absolutely/definitely	Adjective/Adverb
+unentschieden	undecided/draw	Adjective/Adverb
+ungewöhnlich	unusual	Adjective/Adverb
+unglaublich	unbelievable	Adjective/Adverb
+das Unglück	misfortune/accident	Noun
+unheimlich	creepy/incredibly	Adjective/Adverb
+die Uniform	uniform	Noun
+die Universität	university	Noun
+der Universität	university	Noun
+unsere	our	Adjective/Adverb
+unseren	our	Adjective/Adverb
+unterbrechen	to interrupt	Verb
+das Untergeschoss	basement	Noun
+das Untergeschoß	basement (Austrian)	Noun
+(sich) unterhalten	to talk/entertain	Verb
+unterhalten	to entertain/maintain	Verb
+die Unterhaltung	conversation/entertainment	Noun
+die Unterkunft	accommodation	Noun
+die Unterlagen	documents	Noun (Pl.)
+unterlassen	to refrain from	Verb
+unternehmen	to do/undertake	Verb
+der Unternehmer	entrepreneur	Noun
+die Unternehmerin	entrepreneur (f.)	Noun
+unterrichten	to teach	Verb
+untersagt	prohibited	Adjective/Adverb
+unterscheiden	to distinguish	Verb
+der Unterschied	difference	Noun
+unterschiedlich	different/various	Adjective/Adverb
+unterstreichen	to underline	Verb
+unterstützen	to support	Verb
+die Unterstützung	support	Noun
+untersuchen	to examine/investigate	Verb
+die Untersuchung	examination/investigation	Noun
+die Urkunde	certificate/document	Noun
+die Ursache	cause	Noun
+ursprünglich	original(ly)	Adjective/Adverb
+das Urteil	judgment/verdict	Noun
+der User	user	Noun
+die Userin	user (f.)	Noun
+die Vase	vase	Noun
+vegetarisch	vegetarian	Adjective/Adverb
+das Velo	bicycle (Swiss)	Noun
+die Verabredung	appointment/date	Noun
+die Verantwortung	responsibility	Noun
+verbieten	to forbid	Verb
+verbinden	to connect	Verb
+das Verbot	ban/prohibition	Noun
+verbrauchen	to consume/use up	Verb
+der Verbrecher	criminal	Noun
+die Verbrecherin	criminal (f.)	Noun
+verbringen	to spend (time)	Verb
+der Verdacht	suspicion	Noun
+verdächtig	suspicious	Adjective/Adverb
+vereinbaren	to agree/arrange	Verb
+die Vergangenheit	past	Noun
+vergeblich	in vain	Adjective/Adverb
+der Vergleich	comparison	Noun
+das Vergnügen	pleasure	Noun
+vergnügen	to enjoy oneself	Verb
+vergrößern	to enlarge	Verb
+das Verhältnis	relationship/ratio	Noun
+verhaften	to arrest	Verb
+verhalten	to behave	Verb
+verhindern	to prevent	Verb
+das Verkehrsmittel	means of transport	Noun
+das Verkehrszeichen	traffic sign	Noun
+verlängern	to extend	Verb
+der Verlag	publisher	Noun
+verlangen	to demand/charge	Verb
+verlassen	to leave	Verb
+verlaufen	to get lost/proceed	Verb
+die Verletzung	injury	Noun
+verlieben	to fall in love	Verb
+verliebt	in love	Adjective/Adverb
+der Verlierer	loser	Noun
+die Verliererin	loser (f.)	Noun
+der Verlust	loss	Noun
+vermeiden	to avoid	Verb
+die Vermieterin	landlord (f.)	Noun
+die Vermietung	rental	Noun
+vermissen	to miss (someone)	Verb
+die Vermittlung	mediation	Noun
+vermuten	to suspect/assume	Verb
+vermutlich	probably	Adjective/Adverb
+vernünftig	reasonable/sensible	Adjective/Adverb
+veröffentlichen	to publish	Verb
+verpacken	to pack/wrap	Verb
+verpassen	to miss (chance/bus)	Verb
+verpflegen	to cater/provide food	Verb
+verraten	to betray/reveal	Verb
+verreisen	to go on a trip	Verb
+versäumen	to miss/neglect	Verb
+die Versammlung	assembly/meeting	Noun
+verschieben	to postpone	Verb
+verschreiben	to prescribe	Verb
+versichern	to insure/assure	Verb
+die Versichertenkarte	insurance card	Noun
+die Versicherung	insurance	Noun
+versprechen	to promise	Verb
+das Verständnis	understanding	Noun
+der Versuch	attempt/experiment	Noun
+versuchen	to try/attempt	Verb
+verteilen	to distribute	Verb
+vertrauen	to trust	Verb
+vertreten	to represent	Verb
+der Vertreter	representative	Noun
+die Vertreterin	representative (f.)	Noun
+die Vertretung	representation	Noun
+verursachen	to cause	Verb
+verurteilen	to condemn/convict	Verb
+die Verwaltung	administration	Noun
+verwandt	related	Adjective/Adverb
+der Verwandte	relative (m.)	Noun
+die Verwandte	relative (f.)	Noun
+verwechseln	to confuse/mix up	Verb
+verwenden	to use	Verb
+die Verwendung	use	Noun
+verzeihen	to forgive	Verb
+verzichten	to do without/give up	Verb
+viele	many	Adjective/Adverb
+das Viertel	quarter/neighborhood	Noun
+virtuellen	virtual	Adjective/Adverb
+die Visitenkarte	business card	Noun
+das Vitamin	vitamin	Noun
+der Volkshochschule	adult education center	Noun
+die Volkshochschule	adult education center	Noun
+die Volksschule	elementary school	Noun
+die Vollzeit	full-time	Noun
+voneinander	from each other	Adjective/Adverb
+voraus	ahead	Adjective/Adverb
+die Voraussetzung	requirement/prerequisite	Noun
+voraussichtlich	expected/probably	Adjective/Adverb
+die Vorbereitung	preparation	Noun
+der Vorbereitung	preparation	Noun
+vorderen	front	Adjective/Adverb
+die Vorfahrt	right of way	Noun
+vorgestern	day before yesterday	Adjective/Adverb
+das Vorhanden	existing	Noun
+vorhin	a moment ago	Adjective/Adverb
+vorkommen	to happen/occur	Verb
+vorlesen	to read aloud	Verb
+der Vorort	suburb	Noun
+die Vorschrift	regulation/rule	Noun
+vorsichtig	careful	Adjective/Adverb
+die Vorstellung	idea/performance	Noun
+der Vorteil	advantage	Noun
+der Vortrag	lecture/talk	Noun
+vorwärts	forward	Adjective/Adverb
+der Vorwurf	accusation/reproach	Noun
+waagerecht	horizontal	Adjective/Adverb
+wach	awake	Adjective/Adverb
+wachsen	to grow	Verb
+wählen	to choose/elect/dial	Verb
+während	during/while	Adjective/Adverb
+die Wärme	warmth	Noun
+der Wagen	car/wagon	Noun
+die Wahl	choice/election	Noun
+wahnsinnig	crazy/insane	Adjective/Adverb
+wahr	true	Adjective/Adverb
+wahrscheinlich	probably	Adjective/Adverb
+die Wanderung	hike	Noun
+die Ware	goods/product	Noun
+warme	warm	Adjective/Adverb
+warnen	to warn	Verb
+das Waschmittel	detergent	Noun
+der Wecker	alarm clock	Noun
+weggefahren	drove away	Verb
+wehtun	to hurt	Verb
+weich	soft	Adjective/Adverb
+weigern	to refuse	Verb
+die Weiterbildung	further education	Noun
+welchem	which	Adjective/Adverb
+wenden	to turn	Verb
+die Werbung	advertising	Noun
+werfen	to throw	Verb
+das Werk	work/factory	Noun
+das Werkzeug	tool	Noun
+der Wert	value/worth	Noun
+wertlos	worthless	Adjective/Adverb
+wertvoll	valuable	Adjective/Adverb
+weshalb	why/for what reason	Adjective/Adverb
+der Wettbewerb	competition	Noun
+wetten	to bet	Verb
+der Wetterbericht	weather report	Noun
+die Wettervorhersage	weather forecast	Noun
+widersprechen	to contradict	Verb
+die Wiederholung	repetition	Noun
+wiegen	to weigh	Verb
+die Wiese	meadow	Noun
+wieso	why/how come	Adjective/Adverb
+wild	wild	Adjective/Adverb
+winken	to wave	Verb
+wirken	to have an effect	Verb
+die Wirklichkeit	reality	Noun
+die Wirkung	effect	Noun
+der Wirt	innkeeper/landlord	Noun
+die Wirtin	innkeeper (f.)	Noun
+die Wirtschaft	economy	Noun
+die Wissenschaft	science	Noun
+der Wissenschaftler	scientist	Noun
+die Wissenschaftlerin	scientist (f.)	Noun
+der Witz	joke	Noun
+der Wochentag	weekday	Noun
+der Wörter	words	Noun
+wohl	well/probably	Adjective/Adverb
+die Wohngemeinschaft	shared apartment	Noun
+der Wohnort	place of residence	Noun
+der Wohnsitz	place of residence	Noun
+das Wohnzimmer	living room	Noun
+die Wolle	wool	Noun
+der Wortliste	word list	Noun
+der Wortschatzliste	vocabulary list	Noun
+worüber	about what	Adjective/Adverb
+worum	about what	Adjective/Adverb
+die Wunde	wound	Noun
+das Wunder	miracle/wonder	Noun
+zählen	to count	Verb
+die Zahlung	payment	Noun
+die Zahnbürste	toothbrush	Noun
+die Zange	pliers/tongs	Noun
+das Zeichen	sign/symbol	Noun
+zeichnen	to draw	Verb
+die Zeichnung	drawing	Noun
+zeige	show	Adjective/Adverb
+die Zeile	line (of text)	Noun
+der Zeitpunkt	point in time	Noun
+die Zeitschrift	magazine	Noun
+zelten	to camp	Verb
+zentral	central	Adjective/Adverb
+zerstören	to destroy	Verb
+das Zertifikat	certificate	Noun
+der Zettel	note/slip of paper	Noun
+der Zeuge	witness	Noun
+die Zeugin	witness (f.)	Noun
+das Zeugnis	certificate/report card	Noun
+der Zirkus	circus	Noun
+die Zitrone	lemon	Noun
+die Zone	zone	Noun
+der Zoo	zoo	Noun
+zubereiten	to prepare (food)	Verb
+das Zündholz	match (fire, Austrian)	Noun
+zufällig	by chance	Adjective/Adverb
+der Zufall	coincidence	Noun
+zugänglich	accessible	Adjective/Adverb
+der Zugang	access	Noun
+zugehen	to approach/close	Verb
+das Zugfahren	train travel	Noun
+das Zuhause	home	Noun
+zuhören	to listen	Verb
+der Zuhörer	listener	Noun
+die Zuhörerin	listener (f.)	Noun
+zukünftig	future/upcoming	Adjective/Adverb
+zuletzt	last/finally	Adjective/Adverb
+zumachen	to close	Verb
+zunehmen	to increase/gain weight	Verb
+zurechtkommen	to manage/cope	Verb
+zurückfahren	to drive back	Verb
+zusagen	to accept/promise	Verb
+die Zusammenarbeit	cooperation	Noun
+der Zusammenhang	connection/context	Noun
+die Zusammensetzung	composition	Noun
+der Zusammenstellung	compilation	Noun
+zuschauen	to watch	Verb
+der Zuschauer	spectator/viewer	Noun
+die Zuschauerin	spectator (f.)	Noun
+der Zuschlag	surcharge	Noun
+zuständig	responsible/in charge	Adjective/Adverb
+der Zustand	condition/state	Noun
+zustimmen	to agree	Verb
+die Zustimmung	approval/consent	Noun
+die Zutaten	ingredients	Noun (Pl.)
+zuverlässig	reliable	Adjective/Adverb
+zwar	indeed/admittedly	Adjective/Adverb
+der Zweck	purpose	Noun
+der Zweifel	doubt	Noun
+zweifeln	to doubt	Verb
+die Zweitsprache	second language	Noun
+die Zwiebel	onion	Noun
+(sich) zwingen	to force	Verb
