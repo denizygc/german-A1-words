@@ -524,6 +524,67 @@
         }
         .modal-close-btn:hover { border-color: var(--text-dim); color: var(--text-main); }
 
+        .pool-search {
+            width: 100%;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-main);
+            padding: 12px 14px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+        .pool-list {
+            max-height: 320px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+        }
+        .pool-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px 14px;
+            background: var(--btn-bg);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            align-items: flex-start;
+        }
+        .pool-item-left {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            min-width: 0;
+        }
+        .pool-item-word {
+            color: var(--accent-cyan);
+            font-weight: 700;
+            font-size: 0.95rem;
+            overflow-wrap: anywhere;
+        }
+        .pool-item-sub {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            overflow-wrap: anywhere;
+        }
+        .pool-item-tag {
+            font-size: 0.75rem;
+            color: var(--accent-purple);
+            border: 1px solid var(--accent-purple);
+            padding: 4px 10px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+        .pool-empty {
+            color: var(--text-dim);
+            padding: 18px 14px;
+            text-align: center;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--btn-bg);
+        }
+
         .toast {
             position: fixed;
             bottom: 30px;
@@ -653,7 +714,7 @@
 
         <div class="bottom-bar">
             <button class="bottom-btn" onclick="openAddWords()">Add Words</button>
-            <button class="bottom-btn" id="word-pool-info" style="cursor:default; pointer-events:none;">Word Pool: <span id="pool-count">125</span></button>
+            <button class="bottom-btn" id="word-pool-info" onclick="openPoolList()">Word Pool: <span id="pool-count">125</span></button>
         </div>
 
         <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
@@ -746,6 +807,18 @@
 
             <div class="modal-actions">
                 <button class="modal-close-btn" onclick="closeAddWords()">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="pool-modal">
+        <div class="modal">
+            <h2>Word Pool</h2>
+            <p class="modal-sub">Browse all included German words and search the pool instantly.</p>
+            <input id="pool-search" class="pool-search" type="search" placeholder="Search German words..." oninput="renderPoolList(this.value)">
+            <div class="pool-list" id="pool-list"></div>
+            <div class="modal-actions">
+                <button class="modal-close-btn" onclick="closePoolList()">Close</button>
             </div>
         </div>
     </div>
@@ -993,6 +1066,48 @@
         // ===== ADD WORDS MODAL =====
         function openAddWords() {
             document.getElementById('add-modal').classList.add('open');
+        }
+
+        function openPoolList() {
+            document.getElementById('pool-search').value = '';
+            renderPoolList('');
+            document.getElementById('pool-modal').classList.add('open');
+        }
+
+        function closePoolList() {
+            document.getElementById('pool-modal').classList.remove('open');
+        }
+
+        function renderPoolList(filter = '') {
+            const query = filter.trim().toLowerCase();
+            const words = getAllWords();
+            const results = words.filter(w => {
+                const german = (w.full || w.q || '').toLowerCase();
+                const english = ((w.ans || w.eng) || '').toLowerCase();
+                return german.includes(query) || english.includes(query);
+            });
+
+            const list = document.getElementById('pool-list');
+            if (!results.length) {
+                list.innerHTML = '<div class="pool-empty">No words found.</div>';
+                return;
+            }
+
+            list.innerHTML = results.map(w => {
+                const title = w.type === 'artikel' ? w.full : w.q;
+                const subtitle = w.type === 'artikel'
+                    ? `${w.eng} · ${w.ans}`
+                    : `${w.ans}`;
+                return `
+                    <div class="pool-item">
+                        <div class="pool-item-left">
+                            <span class="pool-item-word">${title}</span>
+                            <span class="pool-item-sub">${subtitle}</span>
+                        </div>
+                        <span class="pool-item-tag">${w.type}</span>
+                    </div>
+                `;
+            }).join('');
         }
 
         function closeAddWords() {
