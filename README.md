@@ -1,19 +1,32 @@
 # German A1 Vocab Quiz
 
-A progressive web app for practicing German A1 vocabulary. Listen to words, choose the correct English meaning, and test your knowledge of German articles (der/die/das).
+A progressive web app for practicing German A1 vocabulary, articles, listening, and picture recognition.
 
 ## Features
 
-- **634 questions** — 479 vocab + 155 artikel, covering A1 level
-- **Listen & Choose** — hear the German word spoken aloud via browser TTS
-- **Speed control** — toggle between slow and normal playback
-- **Artikel mode** — choose the correct article (der/die/das) for nouns
-- **Choose question count** — pick 10, 25, 50, all, or a custom number per session
-- **Add words** — add your own vocab or artikel questions directly in the app
-- **Persistent storage** — custom words are saved in localStorage
-- **Category badges** — words are tagged by group (Verb, Noun, Numbers, etc.)
-- **Works offline** — PWA with service worker caching
-- **iPhone ready** — add to home screen for a native app experience
+- **1129 quiz entries** - 756 vocab + 373 artikel
+- **Listening mode** - hear the German word and choose the English meaning
+- **Picture to German mode** - see a picture and choose the German word
+- **Automatic pronunciation** - answers are spoken with browser text-to-speech
+- **Answer reveal** - correct picture answers show German; wrong picture answers show German + English
+- **Artikel practice** - choose the correct article (der/die/das) for nouns
+- **Speed control** - toggle between slow and normal playback
+- **Question count** - choose 10, 25, or 50 questions
+- **Word Pool** - browse words with picture thumbnails where available
+- **Add words** - add your own vocab or artikel questions directly in the app
+- **Persistent storage** - custom words are saved in localStorage
+- **Works offline** - PWA with service worker caching
+- **iPhone ready** - add to Home Screen for a native app experience
+
+## Modes
+
+### Listening
+
+Hear the German word, choose the English meaning, then reveal the written German word.
+
+### Picture
+
+See only the picture, choose the German word. If the answer is wrong, the app pronounces and reveals the correct answer.
 
 ## Word Categories
 
@@ -22,11 +35,12 @@ Months, Numbers, Clothing & Colors, Common Adverbs, Verbs, Nouns, Adjectives, Pr
 ## Quick Start
 
 ```bash
-# Serve locally
 python3 -m http.server 8080
 ```
 
 Open http://localhost:8080 in your browser.
+
+If an old version appears, hard refresh with Cmd + Shift + R or clear site data for localhost.
 
 ## Install on iPhone
 
@@ -39,18 +53,21 @@ Open http://localhost:8080 in your browser.
 
 Host the entire folder on any static hosting:
 
-- **GitHub Pages** — push to a repo, enable Pages
-- **Netlify** — drag and drop the folder
-- **Vercel** — connect the repo
+- **GitHub Pages** - push to a repo, enable Pages
+- **Netlify** - drag and drop the folder
+- **Vercel** - connect the repo
 
 ## Project Structure
 
 ```
-├── index.html          # Single-page app (HTML + CSS + JS)
-├── manifest.json       # PWA manifest
-├── sw.js               # Service worker for offline support
-├── icon-192.png        # App icon 192×192
-├── icon-512.png        # App icon 512×512
+├── index.html             # Single-page app
+├── A1_Studied_Words.txt   # Source word list
+├── a1-word-list.js        # Generated A1 word data
+├── picture-map.js         # Generated SVG picture map
+├── manifest.json          # PWA manifest
+├── sw.js                  # Service worker for offline support
+├── icon-192.png           # App icon 192x192
+├── icon-512.png           # App icon 512x512
 ├── .gitignore
 ├── LICENSE
 └── README.md
@@ -58,4 +75,4 @@ Host the entire folder on any static hosting:
 
 ## Data Source
 
-Vocabulary compiled from Goethe-Zertifikat A1 word list.
+Vocabulary is compiled from the Goethe-Zertifikat A1 word list. Picture SVGs are extracted into `picture-map.js`; raw picture HTML exports are ignored by git.
