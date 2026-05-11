@@ -1,9 +1,10 @@
-const CACHE_NAME = 'german-a1-quiz-v4';
+const CACHE_NAME = 'german-a1-quiz-v6';
 const ASSETS = [
   './',
   './index.html',
   './picture-map.js',
   './a1-word-list.js',
+  './a1-audio-map.js',
   './manifest.json',
   './icon-192.png',
   './icon-512.png',

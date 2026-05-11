@@ -5,3 +5,6 @@ __pycache__/
 # Raw flashcard HTML sources are folded into picture-map.js for the app.
 german-A1-words-pictures/
 german-A1-words-pict*res-html/
+
+# Audio files
+*.mp3
